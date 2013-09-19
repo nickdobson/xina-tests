@@ -1,0 +1,22 @@
+{
+    "name": "insert_no_key",
+    "do": [
+        {
+            "action": "insert",
+            "database": "test_db",
+            "entries": [
+                {
+                    "fields": [
+                        {
+                            "field": "fv",
+                            "value": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "expect": {
+        "status": "er"
+    }
+}
