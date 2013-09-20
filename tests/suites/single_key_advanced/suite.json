@@ -1,0 +1,246 @@
+{
+    "name": "single_key_advanced",
+    "desc": "single key advanced database tests",
+    "tests": [],
+    "suite_start": {
+        "action": "create",
+        "create": "database",
+        "database": {
+            "name": "test_db",
+            "label": "Test Database",
+            "desc": "test database",
+            "fields": [
+                {
+                    "name": "fk",
+                    "type": "int(4)",
+                    "key": true
+                },
+                {
+                    "name": "fv",
+                    "type": "int(4)"
+                },
+                {
+                    "name": "fn1",
+                    "type": "int(4)",
+                    "nul": true
+                },
+                {
+                    "name": "fn2",
+                    "type": "int(4)",
+                    "nul": true
+                },
+                {
+                    "name": "fd1",
+                    "type": "int(4)",
+                    "nul": true,
+                    "def": "7"
+                },
+                {
+                    "name": "fd2",
+                    "type": "int(4)",
+                    "nul": true,
+                    "def": "7"
+                }
+            ],
+            "groups": [
+                {
+                    "name": "g1",
+                    "desc": "group with key",
+                    "fields": [
+                        {
+                            "name": "g1fk",
+                            "type": "int(4)",
+                            "key": true
+                        },
+                        {
+                            "name": "g1fv",
+                            "type": "int(4)"
+                        },
+                        {
+                            "name": "g1fn1",
+                            "type": "int(4)",
+                            "nul": true
+                        },
+                        {
+                            "name": "g1fn2",
+                            "type": "int(4)",
+                            "nul": true
+                        },
+                        {
+                            "name": "g1fd1",
+                            "type": "int(4)",
+                            "nul": true,
+                            "def": "7"
+                        },
+                        {
+                            "name": "g1fd2",
+                            "type": "int(4)",
+                            "nul": true,
+                            "def": "7"
+                        }
+                    ]
+                },
+                {
+                    "name": "g2",
+                    "desc": "group without key",
+                    "fields": [
+                        {
+                            "name": "g1f1",
+                            "type": "int(4)"
+                        },
+                        {
+                            "name": "g1f2",
+                            "type": "int(4)"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "suite_end": {
+        "action": "drop",
+        "drop": "database",
+        "database": "test_db"
+    },
+    "test_start": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "fields": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "fv",
+                        "value": "0"
+                    },
+                    {
+                        "field": "fn1",
+                        "value": "0"
+                    },
+                    {
+                        "field": "fn2",
+                        "value": "0"
+                    },
+                    {
+                        "field": "fd1",
+                        "value": "0"
+                    },
+                    {
+                        "field": "fd2",
+                        "value": "0"
+                    }
+                ],
+                "tags": [
+                    "t1",
+                    "t2"
+                ],
+                "files": [
+                    {
+                        "object_id": "f1.txt",
+                        "name": "f1",
+                        "priority": "3",
+                        "desc": "a"
+                    },
+                    {
+                        "object_id": "f2.txt",
+                        "name": "f2",
+                        "priority": "3",
+                        "desc": "a"
+                    }
+                ],
+                "groups": [
+                    {
+                        "group": "g1",
+                        "items": [
+                            [
+                                {
+                                    "field": "g1fk",
+                                    "value": "0"
+                                },
+                                {
+                                    "field": "g1fv",
+                                    "value": "0"
+                                },
+                                {
+                                    "field": "g1fn1",
+                                    "value": "0"
+                                },
+                                {
+                                    "field": "g1fn2",
+                                    "value": "0"
+                                },
+                                {
+                                    "field": "g1fd1",
+                                    "value": "0"
+                                },
+                                {
+                                    "field": "g1fd2",
+                                    "value": "0"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "g1fk",
+                                    "value": "1"
+                                },
+                                {
+                                    "field": "g1fv",
+                                    "value": "1"
+                                },
+                                {
+                                    "field": "g1fn1",
+                                    "value": "1"
+                                },
+                                {
+                                    "field": "g1fn2",
+                                    "value": "1"
+                                },
+                                {
+                                    "field": "g1fd1",
+                                    "value": "1"
+                                },
+                                {
+                                    "field": "g1fd2",
+                                    "value": "1"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "group": "g2",
+                        "items": [
+                            [
+                                {
+                                    "field": "g2f1",
+                                    "value": "0"
+                                },
+                                {
+                                    "field": "g2f2",
+                                    "value": "0"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "g2f1",
+                                    "value": "1"
+                                },
+                                {
+                                    "field": "g2f2",
+                                    "value": "1"
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "test_end": {
+        "action": "reset",
+        "reset": "database",
+        "database": "test_db"
+    }
+}
