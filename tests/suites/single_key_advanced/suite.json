@@ -1,10 +1,13 @@
 {
     "name": "single_key_advanced",
     "desc": "single key advanced database tests",
-    "tests": [],
+    "tests": [
+	
+	],
     "suite_start": {
         "action": "create",
         "create": "database",
+		"team": "test",
         "database": {
             "name": "test_db",
             "label": "Test Database",
