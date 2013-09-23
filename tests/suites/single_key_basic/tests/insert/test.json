@@ -18,26 +18,24 @@
             }
         ]
     },
-    "expect": {
-        "check": {
-            "select": {
-                "from": {
-                    "type": "table_database",
-                    "database": "test_db",
-                    "table": "entry"
+    "check": {
+        "select": {
+            "from": {
+                "type": "table_database",
+                "database": "test_db",
+                "table": "entry"
+            }
+        },
+        "result": [
+            {
+                "fk": "0",
+                "fv": "0",
+                "active": "1",
+                "owner": {
+                    "type": "not",
+                    "not": null
                 }
-            },
-            "result": [
-                {
-                    "fk": "0",
-                    "fv": "0",
-                    "active": "1",
-                    "owner": {
-						"type": "not",
-						"not": null
-					}
-                }
-            ]
-        }
+            }
+        ]
     }
 }

@@ -16,7 +16,5 @@
             ]
         }
     ],
-    "expect": {
-        "status": "er"
-    }
+    "status": "er"
 }
