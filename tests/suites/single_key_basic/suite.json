@@ -51,11 +51,11 @@
                     "desc": "group without key",
                     "fields": [
                         {
-                            "name": "g1f1",
+                            "name": "g2f1",
                             "type": "int(4)"
                         },
                         {
-                            "name": "g1f2",
+                            "name": "g2f2",
                             "type": "int(4)"
                         }
                     ]
