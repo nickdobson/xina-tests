@@ -16,109 +16,102 @@
                     }
                 ],
                 "groups": [
-                	{
-                		"group":"g1",
-                		"items":[
-                			"fields":[
-                				{
-                				"field":"g1fk",
-                				"value":"0"
-                				},
-                				{
-                				"field":"g1fv",
-                				"value":"0"
-                				}
-                			]
-                		]
-                	},
-                	{
-                		"group":"g2",
-                		"items":[
-            				{"fields":[
-                				{
-                				"field":"g2f1",
-                				"value":"0"
-                				},
-                				{
-                				"field":"g2f2",
-                				"value":"0"
-                				}
-                			]},
-                			{"fields":[
-                				{
-                				"field":"g2f1",
-                				"value":"0"
-                				},
-                				{
-                				"field":"g2f2",
-                				"value":"0"
-                				}
-                			]}
-                		]
-                	}
-				]
+                    {
+                        "group": "g1",
+                        "items": [
+                            [
+                                {
+                                    "field": "g1fk",
+                                    "value": "0"
+                                },
+                                {
+                                    "field": "g1fv",
+                                    "value": "0"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "group": "g2",
+                        "items": [
+                            [
+                                {
+                                    "field": "g2f1",
+                                    "value": "0"
+                                },
+                                {
+                                    "field": "g2f2",
+                                    "value": "0"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "g2f1",
+                                    "value": "0"
+                                },
+                                {
+                                    "field": "g2f2",
+                                    "value": "0"
+                                }
+                            ]
+                        ]
+                    }
+                ]
             }
         ]
     },
     "check": [
-    	{
-        "select": {
-            "from": {
-                "type": "table_database",
-                "database": "test_db",
-                "table": "entry"
-            }
-        },
-        "result": [
-            {
-                "fk": "0",
-                "fv": "0"
-            }
-        ]
-    	},
-    	{
-        "select": {
-            "from": {
-                "type": "table_group",
-                "database": "test_db",
-                "group": {
-                		"type":"name",
-                		"name":"g1"
-                }   
-            }
-        },
-        "result": [
-            {
-                "g1fk":"0",
-                "g1fv":"0",
-                "active": "1"
-            }
-        ]
-    	},
-    	{
-        "select": {
-            "from": {
-                "type": "table_group",
-                "database": "test_db",
-                "group": {
-                		"type":"name",
-                		"name":"g2"
-                }   
-            }
-        },
-        "result": [
-            {
-                "g2f1":"0",
-                "g2f2":"0",
-                "active": "1"
+        {
+            "select": {
+                "from": {
+                    "type": "table_database",
+                    "database": "test_db",
+                    "table": "entry"
+                }
             },
-            {
-            	"g2f1":"0",
-                "g2f2":"0",
-                "active": "1"
-            }
-        ]
-    	}
-    	
+            "result": [
+                {
+                    "fk": "0",
+                    "fv": "0"
+                }
+            ]
+        },
+        {
+            "select": {
+                "from": {
+                    "type": "table_group",
+                    "database": "test_db",
+                    "group": "g1"
+                }
+            },
+            "result": [
+                {
+                    "g1fk": "0",
+                    "g1fv": "0",
+                    "active": "1"
+                }
+            ]
+        },
+        {
+            "select": {
+                "from": {
+                    "type": "table_group",
+                    "database": "test_db",
+                    "group": "g2"
+                }
+            },
+            "result": [
+                {
+                    "g2f1": "0",
+                    "g2f2": "0",
+                    "active": "1"
+                },
+                {
+                    "g2f1": "0",
+                    "g2f2": "0",
+                    "active": "1"
+                }
+            ]
+        }
     ]
 }
