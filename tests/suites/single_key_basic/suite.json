@@ -3,7 +3,13 @@
     "desc": "single key basic database tests",
     "tests": [
         "insert",
-        "insert_no_key"
+        "insert_no_key",
+        "insert_no_value",
+        "insert_one_dupe",
+        "insert_one_one",
+        "insert_two",
+        "insert_with_tags",
+        "insert_with_items"
     ],
     "suite_start": {
         "action": "create",

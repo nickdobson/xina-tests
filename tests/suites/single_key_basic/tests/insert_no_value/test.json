@@ -1,0 +1,20 @@
+{
+    "name": "insert_no_value",
+    "do": [
+        {
+            "action": "insert",
+            "database": "test_db",
+            "entries": [
+                {
+                    "fields": [
+                        {
+                            "field": "fk",
+                            "value": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "status": "er"
+}
