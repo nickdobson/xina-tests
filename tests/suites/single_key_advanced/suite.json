@@ -2,7 +2,11 @@
     "name": "single_key_advanced",
     "desc": "single key advanced database tests",
     "tests": [
-	
+	    "update_fields",
+        "update_tags_insert",
+        "update_tags_delete",
+        "update_files_insert",
+        "update_files_insert_dupe"
 	],
     "suite_start": {
         "action": "create",
