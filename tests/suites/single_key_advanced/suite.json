@@ -92,11 +92,11 @@
                     "desc": "group without key",
                     "fields": [
                         {
-                            "name": "g1f1",
+                            "name": "g2f1",
                             "type": "int(4)"
                         },
                         {
-                            "name": "g1f2",
+                            "name": "g2f2",
                             "type": "int(4)"
                         }
                     ]
@@ -146,13 +146,13 @@
                 ],
                 "files": [
                     {
-                        "object_id": "f1.txt",
+                        "object_id": "{local}/f1.txt",
                         "name": "f1",
                         "priority": "3",
                         "desc": "a"
                     },
                     {
-                        "object_id": "f2.txt",
+                        "object_id": "{local}/f2.txt",
                         "name": "f2",
                         "priority": "3",
                         "desc": "a"
