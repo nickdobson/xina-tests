@@ -1,5 +1,5 @@
 {
-    "name": "update_tags_delete",
+    "name": "update_files_update_priority",
     "do": {
         "action": "update",
         "database": "test_db",
@@ -14,21 +14,32 @@
                 ]
             }
         ],
-        "update":"tags",
-        "op":"delete",
-        "tags": ["t1","t3"]
+        "update":"files",
+        "op":"update",
+        "files": [
+            "f2",
+            "f3"
+        ],
+        "priority":"2"
     },
     "check": {
         "select": {
             "from": {
                 "type": "table_database",
                 "database": "test_db",
-                "table": "tag"
+                "table": "file"
             }
         },
         "result": [
             {
-                "tag":"t2"
+                "name":"f1"
+            },
+            {
+                "name":"f2",
+                "file_version":"0",
+                "size":"10",
+                "desc":"a",
+                "priority":"2"
             }
         ]
     }

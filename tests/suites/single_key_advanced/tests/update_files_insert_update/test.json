@@ -1,11 +1,11 @@
 {
-    "name": "update_files_insert",
+    "name": "update_files_insert_update",
     "do": {
         "action": "update",
         "database": "test_db",
         "entries": [
             {
-                "type": "key",
+				"type": "key",
                 "key": [
                     {
                         "field": "fk",
@@ -18,11 +18,17 @@
         "op":"insert",
         "files": [
             {
-				"object_id":"{local}/f3.txt",
-				"name":"f3",
-				"desc":"b"
+                "object_id":"{local}/f2.txt",
+                "name":"f2",
+                "desc":"b"
+            },
+            {
+                "object_id":"{local}/f3.txt",
+                "name":"f3",
+                "desc":"b"
             }
-        ]
+        ],
+        "mode":"update"
     },
     "check": {
         "select": {
@@ -37,7 +43,12 @@
                 "name":"f1"
             },
             {
-                "name":"f2"
+                "name":"f2",
+                "priority":"3",
+                "desc":"b",
+                "size":"4",
+                "file_version":"1"
+
             },
             {
                 "name":"f3",

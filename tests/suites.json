@@ -2,8 +2,7 @@
 	"name": "primary",
 	"desc": "primary test suites",
 	"suites": [
-		"single_key_basic",
-		"single_key_advanced"
+		"single_key_basic"
 	],
 	"start": {
 		"action": "create",

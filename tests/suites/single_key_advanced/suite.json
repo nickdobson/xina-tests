@@ -6,7 +6,24 @@
         "update_tags_insert",
         "update_tags_delete",
         "update_files_insert",
-        "update_files_insert_dupe"
+        "update_files_insert_dupe",
+		"update_files_insert_update",
+        "update_files_replace",
+        "update_files_replace_dispose",
+        "update_files_set",
+        "update_files_set_dispose",
+        "update_files_delete",
+        "update_files_delete_none",
+        "update_files_restore",
+        "update_files_restore_none",
+        "update_files_dispose",
+        "update_files_dispose_none",
+        "update_files_update_file",
+        "update_files_update_files",
+        "update_files_update_name",
+        "update_files_update_priority",
+        "update_files_update_desc",
+        "update_files_update_all"
 	],
     "suite_start": {
         "action": "create",
@@ -240,6 +257,34 @@
                                 }
                             ]
                         ]
+                    }
+                ]
+            },
+			{
+                "fields": [
+                    {
+                        "field": "fk",
+                        "value": "1"
+                    },
+                    {
+                        "field": "fv",
+                        "value": "1"
+                    },
+                    {
+                        "field": "fn1",
+                        "value": "1"
+                    },
+                    {
+                        "field": "fn2",
+                        "value": "1"
+                    },
+                    {
+                        "field": "fd1",
+                        "value": "1"
+                    },
+                    {
+                        "field": "fd2",
+                        "value": "1"
                     }
                 ]
             }

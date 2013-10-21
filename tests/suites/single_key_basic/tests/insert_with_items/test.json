@@ -19,41 +19,47 @@
                     {
                         "group": "g1",
                         "items": [
-                            [
-                                {
-                                    "field": "g1fk",
-                                    "value": "0"
-                                },
-                                {
-                                    "field": "g1fv",
-                                    "value": "0"
-                                }
-                            ]
+                            {
+                                "fields": [
+                                    {
+                                        "field": "g1fk",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "field": "g1fv",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
                         "group": "g2",
                         "items": [
-                            [
-                                {
-                                    "field": "g2f1",
-                                    "value": "0"
-                                },
-                                {
-                                    "field": "g2f2",
-                                    "value": "0"
-                                }
-                            ],
-                            [
-                                {
-                                    "field": "g2f1",
-                                    "value": "0"
-                                },
-                                {
-                                    "field": "g2f2",
-                                    "value": "0"
-                                }
-                            ]
+                            {
+                                "fields": [
+                                    {
+                                        "field": "g2f1",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "field": "g2f2",
+                                        "value": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "fields": [
+                                    {
+                                        "field": "g2f1",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "field": "g2f2",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ]

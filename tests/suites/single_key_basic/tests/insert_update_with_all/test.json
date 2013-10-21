@@ -2,7 +2,7 @@
     "name": "insert_update_with_all",
     "do": {
         "action": "insert",
-        "mode":"update",
+        "mode": "update",
         "database": "test_db",
         "entries": [
             {
@@ -16,59 +16,68 @@
                         "value": "0"
                     }
                 ],
-                "tags":["t1","t2"],
+                "tags": [
+                    "t1",
+                    "t2"
+                ],
                 "groups": [
                     {
                         "group": "g1",
                         "items": [
-                            [
-                                {
-                                    "field": "g1fk",
-                                    "value": "0"
-                                },
-                                {
-                                    "field": "g1fv",
-                                    "value": "0"
-                                }
-                            ]
+                            {
+                                "fields": [
+                                    {
+                                        "field": "g1fk",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "field": "g1fv",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
                         ]
                     },
                     {
                         "group": "g2",
                         "items": [
-                            [
-                                {
-                                    "field": "g2f1",
-                                    "value": "0"
-                                },
-                                {
-                                    "field": "g2f2",
-                                    "value": "0"
-                                }
-                            ],
-                            [
-                                {
-                                    "field": "g2f1",
-                                    "value": "0"
-                                },
-                                {
-                                    "field": "g2f2",
-                                    "value": "0"
-                                }
-                            ]
+                            {
+                                "fields": [
+                                    {
+                                        "field": "g2f1",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "field": "g2f2",
+                                        "value": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "fields": [
+                                    {
+                                        "field": "g2f1",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "field": "g2f2",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
                 "files": [
                     {
-                        "object_id":"{local}/f1.txt",
-                        "name":"f1"
+                        "object_id": "{local}/f1.txt",
+                        "name": "f1"
                     },
                     {
-                        "object_id":"{local}/f2.txt",
-                        "name":"f2",
-                        "priority":"3",
-                        "desc":"a"
+                        "object_id": "{local}/f2.txt",
+                        "name": "f2",
+                        "priority": "3",
+                        "desc": "a"
                     }
                 ]
             }
@@ -100,10 +109,10 @@
             },
             "result": [
                 {
-                    "tag":"t1"
+                    "tag": "t1"
                 },
                 {
-                    "tag":"t2"
+                    "tag": "t2"
                 }
             ]
         },
@@ -154,24 +163,24 @@
             },
             "result": [
                 {
-                    "name":"f1",
-                    "priority":"1",
+                    "name": "f1",
+                    "priority": "1",
                     "type": {
                         "type": "not",
                         "not": null
                     },
-                    "active":"1",
-                    "size":"4",
+                    "active": "1",
+                    "size": "4",
                     "crc": {
                         "type": "not",
                         "not": null
                     },
-                    "file_version":"0"
+                    "file_version": "0"
                 },
                 {
-                    "name":"f2",
-                    "priority":"3",
-                    "desc":"a"
+                    "name": "f2",
+                    "priority": "3",
+                    "desc": "a"
                 }
             ]
         }

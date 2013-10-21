@@ -1,11 +1,11 @@
 {
-    "name": "update_tags_delete",
+    "name": "update_files_delete",
     "do": {
         "action": "update",
         "database": "test_db",
         "entries": [
             {
-                "type": "key",
+				"type": "key",
                 "key": [
                     {
                         "field": "fk",
@@ -14,21 +14,29 @@
                 ]
             }
         ],
-        "update":"tags",
+        "update":"files",
         "op":"delete",
-        "tags": ["t1","t3"]
+        "files": [
+			"f2",
+            "f3"
+        ]
     },
     "check": {
         "select": {
             "from": {
                 "type": "table_database",
                 "database": "test_db",
-                "table": "tag"
+                "table": "file"
             }
         },
         "result": [
             {
-                "tag":"t2"
+                "name":"f1",
+                "active":"1"
+            },
+            {
+                "name":"f2",
+                "active":"0"
             }
         ]
     }

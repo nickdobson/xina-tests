@@ -1,5 +1,5 @@
 {
-    "name": "update_files_insert",
+    "name": "update_files_set",
     "do": {
         "action": "update",
         "database": "test_db",
@@ -15,12 +15,17 @@
             }
         ],
         "update":"files",
-        "op":"insert",
+        "op":"set",
         "files": [
             {
-				"object_id":"{local}/f3.txt",
-				"name":"f3",
-				"desc":"b"
+                "object_id":"{local}/f2.txt",
+                "name":"f2",
+                "desc":"b"
+            },
+            {
+                "object_id":"{local}/f3.txt",
+                "name":"f3",
+                "desc":"b"
             }
         ]
     },
@@ -34,10 +39,16 @@
         },
         "result": [
             {
-                "name":"f1"
+                "name":"f1",
+                "active":"0"
             },
             {
-                "name":"f2"
+                "name":"f2",
+                "priority":"1",
+                "desc":"b",
+                "size":"4",
+                "file_version":"1"
+
             },
             {
                 "name":"f3",

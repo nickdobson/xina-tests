@@ -1,5 +1,5 @@
 {
-    "name": "update_files_insert_dupe",
+    "name": "update_files_dispose",
     "do": {
         "action": "update",
         "database": "test_db",
@@ -15,14 +15,22 @@
             }
         ],
         "update":"files",
-        "op":"insert",
-        "files": [
+        "op":"dispose",
+        "files": [ "f2", "f3" ]
+    },
+    "check": {
+        "select": {
+            "from": {
+                "type": "table_database",
+                "database": "test_db",
+                "table": "file"
+            }
+        },
+        "result": [
             {
-                "object_id":"{local}/f2.txt",
-                "name":"f2",
-                "desc":"b"
+                "name":"f1",
+                "active":"1"
             }
         ]
-    },
-    "status": "er"
+    }
 }
