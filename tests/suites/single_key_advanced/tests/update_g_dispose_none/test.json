@@ -3,8 +3,7 @@
     "do": {
         "action": "update",
         "database": "test_db",
-        "entries": [
-            {
+        "entries": {
                 "type":"key",
                 "key": [
                     {
@@ -12,20 +11,12 @@
                         "value": "0"
                     }
                 ]
-            }
-        ],
+            },
         "update":"items",
         "op":"dispose",
         "group": "g2",
         "items": [
-            {
-                "fields":[
-                    {
-                        "field":"item_id",
-                        "value":"2"
-                    }
-                ]
-            }
+            2
         ]
     },
     "check": {

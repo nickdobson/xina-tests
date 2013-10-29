@@ -5,7 +5,7 @@
         "database": "test_db",
         "entries": [
             {
-                "type":"key",
+                "type": "key",
                 "key": [
                     {
                         "field": "fk",
@@ -14,19 +14,25 @@
                 ]
             }
         ],
-        "update":"items",
-        "op":"delete",
+        "update": "items",
+        "op": "delete",
         "group": "g1",
         "items": [
             {
-                "fields":[
+                "type": "key",
+                "key": [
                     {
-                        "field":"g1fk",
-                        "value":"1"
-                    },
+                        "field": "g1fk",
+                        "value": "1"
+                    }
+                ]
+            },
+            {
+                "type": "key",
+                "key": [
                     {
-                        "field":"g1fk",
-                        "value":"2"
+                        "field": "g1fk",
+                        "value": "2"
                     }
                 ]
             }
@@ -42,12 +48,12 @@
         },
         "result": [
             {
-                "g1fk":"0",
-                "active":"1"
+                "g1fk": "0",
+                "active": "1"
             },
             {
-                "g1fk":"1",
-                "active":"0"
+                "g1fk": "1",
+                "active": "0"
             }
         ]
     }

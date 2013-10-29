@@ -5,8 +5,7 @@
         "database": "test_db",
         "entries": [
             {
-                "type": "key",
-                "key": [
+                "fields": [
                     {
                         "field": "fk",
                         "value": "0"
@@ -19,19 +18,5 @@
             }
         ]
     },
-    "check": {
-        "select": {
-            "from": {
-                "type": "table_database",
-                "database": "test_db",
-                "table": "entry"
-            }
-        },
-        "result": [
-            {
-                "fk": "0",
-                "int8": "-9223372036854775809"
-            }
-        ]
-    }
+    "status":"er"
 }

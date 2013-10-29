@@ -1,13 +1,12 @@
 {
     "name": "replace_dispose",
-    "do":{
+    "do": {
         "action": "replace",
-        "mode":"dispose",
+        "mode": "dispose",
         "database": "test_db",
         "entries": [
             {
-                "type": "key",
-                "key": [
+                "fields": [
                     {
                         "field": "fk",
                         "value": "2"
@@ -19,8 +18,7 @@
                 ]
             },
             {
-                "type": "key",
-                "key": [
+                "fields": [
                     {
                         "field": "fk",
                         "value": "0"
@@ -38,98 +36,92 @@
                         "value": "1"
                     }
                 ],
-                "update":"tags",
-                "op":"set",
-                "tags": ["t2","t3"],
-
-                "update":"files",
-                "op":"set",
+                "tags": [
+                    "t2",
+                    "t3"
+                ],
                 "files": [
                     {
-                        "object_id":"{local}/f2.txt",
-                        "type":"name",
-                        "name":"f2",
-                        "desc":"b"
+                        "object_id": "{local}/f2.txt",
+                        "type": "name",
+                        "name": "f2",
+                        "desc": "b"
                     },
                     {
-                        "object_id":"{local}/f3.txt",
-                        "type":"name",
-                        "name":"f3",
-                        "desc":"b"
+                        "object_id": "{local}/f3.txt",
+                        "type": "name",
+                        "name": "f3",
+                        "desc": "b"
                     }
                 ],
-                "mode":"dispose",
-
-                "update":"items",
-                "op":"set",
-                "group": "g1",
-                "items": [
+                "groups": [
                     {
-                        "fields":[
+                        "group": "g1",
+                        "items": [
                             {
-                                "field":"g1fk",
-                                "value":"1"
+                                "fields": [
+                                    {
+                                        "field": "g1fk",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "field": "g1fv",
+                                        "value": "2"
+                                    },
+                                    {
+                                        "field": "g1fn1",
+                                        "value": "2"
+                                    },
+                                    {
+                                        "field": "g1fd1",
+                                        "value": "2"
+                                    }
+                                ]
                             },
                             {
-                                "field":"g1fv",
-                                "value":"2"
-                            },
-                            {
-                                "field":"g1fn1",
-                                "value":"2"
-                            },
-                            {
-                                "field":"g1fd1",
-                                "value":"2"
-                            }
-                        ]
-                    },
-                    {
-                        "fields":[
-                            {
-                                "field":"g1fk",
-                                "value":"2"
-                            },
-                            {
-                                "field":"g1fv",
-                                "value":"2"
-                            }
-                        ]
-                    }
-                ],
-                "mode":"dispose",
-
-
-                "update":"items",
-                "op":"set",
-                "group": "g2",
-                "items": [
-                    {
-                        "fields":[
-                            {
-                                "field":"g2f1",
-                                "value":"1"
-                            },
-                            {
-                                "field":"g2f2",
-                                "value":"2"
+                                "fields": [
+                                    {
+                                        "field": "g1fk",
+                                        "value": "2"
+                                    },
+                                    {
+                                        "field": "g1fv",
+                                        "value": "2"
+                                    }
+                                ]
                             }
                         ]
                     },
                     {
-                        "fields":[
+                        "group": "g2",
+                        "items": [
                             {
-                                "field":"g2f1",
-                                "value":"2"
+                                "fields": [
+                                    {
+                                        "field": "g2f1",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "field": "g2f2",
+                                        "value": "2"
+                                    }
+                                ]
                             },
                             {
-                                "field":"g2f2",
-                                "value":"2"
+                                "fields": [
+                                    {
+                                        "field": "g2f1",
+                                        "value": "2"
+                                    },
+                                    {
+                                        "field": "g2f2",
+                                        "value": "2"
+                                    }
+                                ]
                             }
                         ]
                     }
-                ],
-                "mode":"dispose"
+                ]
             }
         ]
     },

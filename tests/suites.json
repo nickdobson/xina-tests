@@ -1,8 +1,11 @@
 {
 	"name": "primary",
 	"desc": "primary test suites",
+	"disabled": [],
 	"suites": [
-		"single_key_basic"
+		"single_key_basic",
+		"single_key_advanced",
+		"types"
 	],
 	"start": {
 		"action": "create",

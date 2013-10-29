@@ -5,8 +5,7 @@
         "database": "test_db",
         "entries": [
             {
-                "type": "key",
-                "key": [
+                "fields": [
                     {
                         "field": "fk",
                         "value": "0"

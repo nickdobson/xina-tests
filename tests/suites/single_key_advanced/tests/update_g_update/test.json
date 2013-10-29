@@ -3,8 +3,7 @@
     "do": {
         "action": "update",
         "database": "test_db",
-        "entries": [
-            {
+        "entries": {
                 "type":"key",
                 "key": [
                     {
@@ -12,24 +11,13 @@
                         "value": "0"
                     }
                 ]
-            }
-        ],
+            },
         "update":"items",
-        "op":"insert",
+        "op":"update",
         "group": "g2",
         "items": [
-            {
-                "fields":[
-                    {
-                        "field":"item_id",
-                        "value":"1"
-                    },
-                    {
-                        "field":"item_id",
-                        "value":"2"
-                    }
-                ]
-            }
+            1,
+			2
         ],
         "fields": [
             {

@@ -1,68 +1,46 @@
 {
     "name": "update_g_restore_none",
-    "do":
-        [
-            {
-                "action": "update",
-                "database": "test_db",
-                "entries": [
+    "do": [
+        {
+            "action": "update",
+            "database": "test_db",
+            "entries": {
+                "type": "key",
+                "key": [
                     {
-                        "type":"key",
-                        "key": [
-                            {
-                                "field": "fk",
-                                "value": "0"
-                            }
-                        ]
-                    }
-                ],
-                "update":"items",
-                "op":"delete",
-                "group": "g2",
-                "items": [
-                    {
-                        "fields":[
-                            {
-                                "field":"item_id",
-                                "value":"1"
-                            },
-                            {
-                                "field":"item_id",
-                                "value":"2"
-                            }
-                        ]
+                        "field": "fk",
+                        "value": "0"
                     }
                 ]
             },
-            {
-                "action": "update",
-                "database": "test_db",
-                "entries": [
+            "update": "items",
+            "op": "delete",
+            "group": "g2",
+            "items": [
+                1,
+                2
+            ]
+        },
+        {
+            "action": "update",
+            "database": "test_db",
+            "entries": {
+                "type": "key",
+                "key": [
                     {
-                        "type":"key",
-                        "key": [
-                            {
-                                "field": "fk",
-                                "value": "0"
-                            }
-                        ]
-                    }
-                ],
-                "update":"items",
-                "op":"restore",
-                "group": "g2",
-                "items": [
-                    {
-                        "fields":[
-                            {
-                                "field":"item_id",
-                                "value":"2"
-                            }
-                        ]
+                        "field": "fk",
+                        "value": "0"
                     }
                 ]
-            }
-        ],
+            },
+            "update": "items",
+            "op": "restore",
+            "group": "g2",
+            "items": [
+                2
+            ]
+        }
+    ],
     "check": {
         "select": {
             "from": {
@@ -73,12 +51,12 @@
         },
         "result": [
             {
-                "item_id":"0",
-                "active":"1"
+                "item_id": "0",
+                "active": "1"
             },
             {
-                "item_id":"1",
-                "active":"0"
+                "item_id": "1",
+                "active": "0"
             }
         ]
     }

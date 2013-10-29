@@ -19,14 +19,20 @@
         "group": "g1",
         "items": [
             {
-                "fields":[
+                "type": "key",
+                "key": [
                     {
-                        "field":"g1fk",
-                        "value":"1"
-                    },
+                        "field": "g1fk",
+                        "value": "1"
+                    }
+                ]
+            },
+            {
+                "type": "key",
+                "key": [
                     {
-                        "field":"g1fk",
-                        "value":"2"
+                        "field": "g1fk",
+                        "value": "2"
                     }
                 ]
             }

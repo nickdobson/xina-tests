@@ -1,11 +1,11 @@
 {
-    "name": "update_gk_dispose",
+    "name": "update_gk_dispose_none",
     "do": {
         "action": "update",
         "database": "test_db",
         "entries": [
             {
-                "type":"key",
+                "type": "key",
                 "key": [
                     {
                         "field": "fk",
@@ -14,19 +14,18 @@
                 ]
             }
         ],
-        "update":"items",
-        "op":"dispose",
+        "update": "items",
+        "op": "dispose",
         "group": "g1",
-        "items": [
-            {
-                "fields":[
-                    {
-                        "field":"g1fk",
-                        "value":"2"
-                    }
-                ]
-            }
-        ]
+        "items": {
+            "type": "key",
+            "key": [
+                {
+                    "field": "g1fk",
+                    "value": "2"
+                }
+            ]
+        }
     },
     "check": {
         "select": {
@@ -38,12 +37,12 @@
         },
         "result": [
             {
-                "g1fk":"0",
-                "active":"1"
+                "g1fk": "0",
+                "active": "1"
             },
             {
-                "g1fk":"1",
-                "active":"1"
+                "g1fk": "1",
+                "active": "1"
             }
         ]
     }
