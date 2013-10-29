@@ -1,0 +1,37 @@
+{
+    "name": "stringn_trim",
+    "do": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "string4",
+                        "value": " ab "
+                    }
+                ]
+            }
+        ]
+    },
+    "check": {
+        "select": {
+            "from": {
+                "type": "table_database",
+                "database": "test_db",
+                "table": "entry"
+            }
+        },
+        "result": [
+            {
+                "fk": "0",
+                "string4": "ab"
+            }
+        ]
+    }
+}

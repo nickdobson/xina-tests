@@ -1,0 +1,268 @@
+{
+    "name": "set",
+    "do":{
+        "action": "set",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "2"
+                    },
+                    {
+                        "field": "fv",
+                        "value": "2"
+                    }
+                ]
+            },
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "fv",
+                        "value": "1"
+                    },
+                    {
+                        "field": "fn1",
+                        "value": "1"
+                    },
+                    {
+                        "field": "fd1",
+                        "value": "1"
+                    }
+                ],
+                "update":"tags",
+                "op":"set",
+                "tags": ["t2","t3"],
+
+                "update":"files",
+                "op":"set",
+                "files": [
+                    {
+                        "object_id":"{local}/f2.txt",
+                        "type":"name",
+                        "name":"f2",
+                        "desc":"b"
+                    },
+                    {
+                        "object_id":"{local}/f3.txt",
+                        "type":"name",
+                        "name":"f3",
+                        "desc":"b"
+                    }
+                ],
+
+                "update":"items",
+                "op":"set",
+                "group": "g1",
+                "items": [
+                    {
+                        "fields":[
+                            {
+                                "field":"g1fk",
+                                "value":"1"
+                            },
+                            {
+                                "field":"g1fv",
+                                "value":"2"
+                            },
+                            {
+                                "field":"g1fn1",
+                                "value":"2"
+                            },
+                            {
+                                "field":"g1fd1",
+                                "value":"2"
+                            }
+                        ]
+                    },
+                    {
+                        "fields":[
+                            {
+                                "field":"g1fk",
+                                "value":"2"
+                            },
+                            {
+                                "field":"g1fv",
+                                "value":"2"
+                            }
+                        ]
+                    }
+                ],
+
+                "update":"items",
+                "op":"set",
+                "group": "g2",
+                "items": [
+                    {
+                        "fields":[
+                            {
+                                "field":"g2f1",
+                                "value":"1"
+                            },
+                            {
+                                "field":"g2f2",
+                                "value":"2"
+                            }
+                        ]
+                    },
+                    {
+                        "fields":[
+                            {
+                                "field":"g2f1",
+                                "value":"2"
+                            },
+                            {
+                                "field":"g2f2",
+                                "value":"2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "check": [
+        {
+            "select": {
+                "from": {
+                    "type": "table_database",
+                    "database": "test_db",
+                    "table": "entry"
+                }
+            },
+            "result": [
+                {
+                    "fk": "0",
+                    "fv": "1",
+                    "fn1":"1",
+                    "fn2":null,
+                    "fd1":"1",
+                    "fd2":"7"
+                },
+                {
+                    "fk": "1",
+                    "fv": "1",
+                    "active":"0"
+                },
+                {
+                    "fk": "2",
+                    "fv": "2"
+                }
+            ]
+        },
+        {
+            "select": {
+                "from": {
+                    "type": "table_database",
+                    "database": "test_db",
+                    "table": "tag"
+                }
+            },
+            "result": [
+                {
+                    "tag":"t2"
+                },
+                {
+                    "tag":"t3"
+                }
+            ]
+        },
+        {
+            "select": {
+                "from": {
+                    "type": "table_database",
+                    "database": "test_db",
+                    "table": "file"
+                }
+            },
+            "result": [
+                {
+                    "name":"f1",
+                    "active":"0"
+                },
+                {
+                    "name":"f2",
+                    "priority":"1",
+                    "desc":"b",
+                    "size":"4",
+                    "file_version":"1"
+
+                },
+                {
+                    "name":"f3",
+                    "priority":"1",
+                    "desc":"b",
+                    "file_version":"0",
+                    "active":"1",
+                    "size":"4"
+                }
+            ]
+        },
+        {
+            "select": {
+                "from": {
+                    "type": "table_group",
+                    "database": "test_db",
+                    "group": "g1"
+                }
+            },
+            "result": [
+                {
+                    "g1fk":"0",
+                    "active":"0"
+                },
+                {
+                    "g1fk":"1",
+                    "g1fv":"2",
+                    "g1fn1":"2",
+                    "g1fn2":null,
+                    "g1fd1":"2",
+                    "g1fd2":"7"
+                },
+                {
+                    "g1fk":"2",
+                    "g1fv":"2"
+                }
+            ]
+        },
+        {
+            "select": {
+                "from": {
+                    "type": "table_group",
+                    "database": "test_db",
+                    "group": "g2"
+                }
+            },
+            "result": [
+                {
+                    "g2f1":"0",
+                    "g2f2":"0",
+                    "active":"0"
+                },
+                {
+                    "g2f1":"1",
+                    "g2f2":"1",
+                    "active":"0"
+                },
+                {
+                    "g2f1":"1",
+                    "g2f2":"2",
+                    "active":"1"
+                },
+                {
+                    "g2f1":"2",
+                    "g2f2":"2",
+                    "active":"1"
+                }
+            ]
+        }
+
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "bool_m",
+    "do": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "bool",
+                        "value": "m"
+                    }
+                ]
+            }
+        ]
+    },
+    "status":"er"
+}

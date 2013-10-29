@@ -1,0 +1,23 @@
+{
+    "name": "int_text",
+    "do": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "int1",
+                        "value": "1A"
+                    }
+                ]
+            }
+        ]
+    },
+    "status":"er"
+}

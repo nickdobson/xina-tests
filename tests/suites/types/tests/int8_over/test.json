@@ -1,0 +1,23 @@
+{
+    "name": "int8_over",
+    "do": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "int8",
+                        "value": "9223372036854775808"
+                    }
+                ]
+            }
+        ]
+    },
+    "status":"er"
+}

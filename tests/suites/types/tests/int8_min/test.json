@@ -1,0 +1,37 @@
+{
+    "name": "int8_min",
+    "do": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "int8",
+                        "value": "-9223372036854775808"
+                    }
+                ]
+            }
+        ]
+    },
+    "check": {
+        "select": {
+            "from": {
+                "type": "table_database",
+                "database": "test_db",
+                "table": "entry"
+            }
+        },
+        "result": [
+            {
+                "fk": "0",
+                "int8": "-9223372036854775808"
+            }
+        ]
+    }
+}

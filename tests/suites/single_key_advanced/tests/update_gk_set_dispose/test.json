@@ -1,0 +1,79 @@
+{
+    "name": "update_gk_set_dispose",
+    "do": {
+        "action": "update",
+        "database": "test_db",
+        "entries": [
+            {
+                "type":"key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    }
+                ]
+            }
+        ],
+        "update":"items",
+        "op":"set",
+        "group": "g1",
+        "items": [
+            {
+                "fields":[
+                    {
+                        "field":"g1fk",
+                        "value":"1"
+                    },
+                    {
+                        "field":"g1fv",
+                        "value":"2"
+                    },
+                    {
+                        "field":"g1fn1",
+                        "value":"2"
+                    },
+                    {
+                        "field":"g1fd1",
+                        "value":"2"
+                    }
+                ]
+            },
+            {
+                "fields":[
+                    {
+                        "field":"g1fk",
+                        "value":"2"
+                    },
+                    {
+                        "field":"g1fv",
+                        "value":"2"
+                    }
+                ]
+            }
+        ],
+        "mode":"dispose"
+    },
+    "check": {
+        "select": {
+            "from": {
+                "type": "table_group",
+                "database": "test_db",
+                "group": "g1"
+            }
+        },
+        "result": [
+            {
+                "g1fk":"1",
+                "g1fv":"2",
+                "g1fn1":"2",
+                "g1fn2":null,
+                "g1fd1":"2",
+                "g1fd2":"7"
+            },
+            {
+                "g1fk":"2",
+                "g1fv":"2"
+            }
+        ]
+    }
+}

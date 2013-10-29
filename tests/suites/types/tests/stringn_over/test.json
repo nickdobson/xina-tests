@@ -1,0 +1,23 @@
+{
+    "name": "stringn_over",
+    "do": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "string4",
+                        "value": "abcde"
+                    }
+                ]
+            }
+        ]
+    },
+    "status":"er"
+}

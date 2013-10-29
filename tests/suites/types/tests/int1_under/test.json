@@ -1,0 +1,23 @@
+{
+    "name": "int1_under",
+    "do": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "int1",
+                        "value": "-129"
+                    }
+                ]
+            }
+        ]
+    },
+    "status":"er"
+}

@@ -1,0 +1,54 @@
+{
+    "name": "update_g_delete",
+    "do": {
+        "action": "update",
+        "database": "test_db",
+        "entries": [
+            {
+                "type":"key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    }
+                ]
+            }
+        ],
+        "update":"items",
+        "op":"delete",
+        "group": "g2",
+        "items": [
+            {
+                "fields":[
+                    {
+                        "field":"item_id",
+                        "value":"1"
+                    },
+                    {
+                        "field":"item_id",
+                        "value":"2"
+                    }
+                ]
+            }
+        ]
+    },
+    "check": {
+        "select": {
+            "from": {
+                "type": "table_group",
+                "database": "test_db",
+                "group": "g2"
+            }
+        },
+        "result": [
+            {
+                "item_id":"0",
+                "active":"1"
+            },
+            {
+                "item_id":"1",
+                "active":"0"
+            }
+        ]
+    }
+}

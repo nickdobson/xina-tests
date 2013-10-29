@@ -1,0 +1,23 @@
+{
+    "name": "int4_over",
+    "do": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "int4",
+                        "value": "2147483648"
+                    }
+                ]
+            }
+        ]
+    },
+    "status":"er"
+}

@@ -1,0 +1,37 @@
+{
+    "name": "text_spaces",
+    "do": {
+        "action": "insert",
+        "database": "test_db",
+        "entries": [
+            {
+                "type": "key",
+                "key": [
+                    {
+                        "field": "fk",
+                        "value": "0"
+                    },
+                    {
+                        "field": "text",
+                        "value": "a  d"
+                    }
+                ]
+            }
+        ]
+    },
+    "check": {
+        "select": {
+            "from": {
+                "type": "table_database",
+                "database": "test_db",
+                "table": "entry"
+            }
+        },
+        "result": [
+            {
+                "fk": "0",
+                "text": "a  d"
+            }
+        ]
+    }
+}
