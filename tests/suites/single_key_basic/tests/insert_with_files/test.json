@@ -64,7 +64,7 @@
                 },
                 "active":"1",
                 "size":"4",
-                "crc": {
+                "md5": {
                     "type": "not",
                     "not": null
                 },
