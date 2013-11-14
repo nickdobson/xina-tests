@@ -24,7 +24,7 @@
         "update_files_update_priority",
         "update_files_update_desc",
 		"update_files_update_all",
-        "update_gk_insert",
+		"update_gk_insert",
         "update_gk_insert_dupe",
         "update_gk_insert_update",
         "update_gk_replace",
