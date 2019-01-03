@@ -1,123 +1,121 @@
 {
-    "name": "types",
-    "desc": "types database tests",
-    "tests": [
-        "bool_0",
-        "bool_1",
-        "bool_false",
-        "bool_true",
-        "bool_f",
-        "bool_t",
-        "bool_2",
-        "bool_m",
-        "int1_min",
-        "int1_max",
-        "int1_under",
-        "int1_over",
-        "int2_min",
-        "int2_max",
-        "int2_under",
-        "int2_over",
-        "int4_min",
-        "int4_max",
-        "int4_under",
-        "int4_over",
-        "int8_min",
-        "int8_max",
-        "int8_under",
-        "int8_over",
-        "int_decimal",
-        "int_text",
-        "float4",
-        "float8",
-        "float_text",
-        "stringn",
-        "stringn_over",
-        "stringn_spaces",
-        "stringn_overspace",
-        "stringn_trim",
-        "string",
-        "string_spaces",
-        "string_overspace",
-        "string_trim",
-        "text_spaces",
-        "text_trim"
-    ],
-    "suite_start": {
-        "action": "create",
-        "create": "database",
-        "team": "test",
-        "database": {
-            "name": "test_db",
-            "label": "Test Database",
-            "desc": "test database",
-            "fields": [
-                {
-                    "name": "fk",
-                    "type": "int(4)",
-                    "key": true
-                },
-                {
-                    "name": "bool",
-                    "type": "boolean",
-                    "nul": true
-                },
-                {
-                    "name":"int1",
-                    "type":"int(1)",
-                    "nul": true
-                },
-                {
-                    "name":"int2",
-                    "type":"int(2)",
-                    "nul": true
-                },
-                {
-                    "name":"int4",
-                    "type":"int(4)",
-                    "nul": true
-                },
-                {
-                    "name":"int8",
-                    "type":"int(8)",
-                    "nul": true
-                },
-                {
-                    "name":"float4",
-                    "type":"float(4)",
-                    "nul": true
-                },
-                {
-                    "name":"float8",
-                    "type":"float(8)",
-                    "nul": true
-                },
-                {
-                    "name":"string4",
-                    "type":"string(4)",
-                    "nul": true
-                },
-                {
-                    "name":"string",
-                    "type":"string",
-                    "nul": true
-                },
-                {
-                    "name":"text",
-                    "type":"text",
-                    "nul": true
-                }
-            ]
+  "name"        : "types",
+  "desc"        : "tests for all data types",
+  "suite_start" : {
+    "action"   : "create",
+    "create"   : "database",
+    "parent"   : "test",
+    "database" : {
+      "name"   : "test_db",
+      "label"  : "Test Database",
+      "desc"   : "test database",
+      "fields" : [
+        {
+          "name" : "fk",
+          "type" : "int(4)",
+          "key"  : true
+        },
+        {
+          "name" : "bool",
+          "type" : "boolean",
+          "nul"  : true
+        },
+        {
+          "name" : "int1",
+          "type" : "int(1)",
+          "nul"  : true
+        },
+        {
+          "name" : "int2",
+          "type" : "int(2)",
+          "nul"  : true
+        },
+        {
+          "name" : "int4",
+          "type" : "int(4)",
+          "nul"  : true
+        },
+        {
+          "name" : "int8",
+          "type" : "int(8)",
+          "nul"  : true
+        },
+        {
+          "name" : "float4",
+          "type" : "float(4)",
+          "nul"  : true
+        },
+        {
+          "name" : "float8",
+          "type" : "float(8)",
+          "nul"  : true
+        },
+        {
+          "name" : "asciistring4",
+          "type" : "asciistring(4)",
+          "nul"  : true
+        },
+        {
+          "name" : "asciistring",
+          "type" : "asciistring",
+          "nul"  : true
+        },
+        {
+          "name" : "asciitext",
+          "type" : "asciitext",
+          "nul"  : true
+        },
+        {
+          "name" : "utf8string4",
+          "type" : "utf8string(4)",
+          "nul"  : true
+        },
+        {
+          "name" : "utf8string",
+          "type" : "utf8string",
+          "nul"  : true
+        },
+        {
+          "name" : "utf8text",
+          "type" : "utf8text",
+          "nul"  : true
+        },
+        {
+          "name" : "datetime",
+          "type" : "datetime",
+          "nul"  : true
+        },
+        {
+          "name" : "date",
+          "type" : "date",
+          "nul"  : true
+        },
+        {
+          "name" : "localdatetime",
+          "type" : "localdatetime",
+          "nul"  : true
+        },
+        {
+          "name" : "localdate",
+          "type" : "localdate",
+          "nul"  : true
+        },
+        {
+          "name" : "localtime",
+          "type" : "localtime",
+          "nul"  : true
         }
-    },
-    "suite_end": {
-        "action":"drop",
-        "drop":"database",
-        "database":"test_db"
-    },
-    "test_end": {
-        "action": "reset",
-        "reset": "database",
-        "database": "test_db"
+      ]
     }
+  },
+  "suite_end": {
+    "action"   : "drop",
+    "drop"     : "database",
+    "database" : "test.test_db"
+  },
+  "test_end"  : {
+    "action"   : "delete",
+    "database" : "test.test_db",
+    "records"  : { "type": "all" }
+  }
 }

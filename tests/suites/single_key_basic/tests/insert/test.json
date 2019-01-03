@@ -1,41 +1,41 @@
 {
-    "name": "insert",
-    "do": {
-        "action": "insert",
-        "database": "test_db",
-        "entries": [
-            {
-                "fields": [
-                    {
-                        "field": "fk",
-                        "value": "0"
-                    },
-                    {
-                        "field": "fv",
-                        "value": "0"
-                    }
-                ]
-            }
+  "name" : "insert",
+  "do"   : {
+    "action"   : "insert",
+    "database" : "test_db",
+    "records"  : [
+      {
+        "fk": 0,
+        "fv": 0
+      },
+      {
+        "fields": [
+          {
+            "field": "fk",
+            "value": "0"
+          },
+          {
+            "field": "fv",
+            "value": "0"
+          }
         ]
+      }
+    ]
+  },
+  "check": {
+    "select": {
+      "from": "test.test_db"
     },
-    "check": {
-        "select": {
-            "from": {
-                "type": "table_database",
-                "database": "test_db",
-                "table": "entry"
-            }
-        },
-        "result": [
-            {
-                "fk": "0",
-                "fv": "0",
-                "active": "1",
-                "owner": {
-                    "type": "not",
-                    "not": null
-                }
-            }
-        ]
-    }
+    "result": [
+      {
+        "fk": "0",
+        "fv": "0",
+        "active": "1",
+        "owner": {
+          "type": "not",
+          "not": null
+        }
+      }
+    ]
+  }
 }

@@ -1,0 +1,74 @@
+[
+  {
+    "name" : "datetime_full_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{ "fk": 0, "datetime": "2000-01-01T00:00:00.000Z" }]
+    },
+    "check" : {
+      "select" : { "from": "test.test_db" },
+      "result" : [{ "fk": "0", "datetime": "946684800000" }]
+    }
+  },
+  {
+    "name" : "datetime_sec_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{ "fk": 0, "datetime": "2000-01-01T00:00:00Z" }]
+    },
+    "check" : {
+      "select" : { "from": "test.test_db" },
+      "result" : [{ "fk": "0", "datetime": "946684800000" }]
+    }
+  },
+  {
+    "name" : "datetime_min_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{ "fk": 0, "datetime": "2000-01-01T00:00Z" }]
+    },
+    "check" : {
+      "select" : { "from": "test.test_db" },
+      "result" : [{ "fk": "0", "datetime": "946684800000" }]
+    }
+  },
+  {
+    "name" : "datetime_hour_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{ "fk": 0, "datetime": "2000-01-01T00Z" }]
+    },
+    "check" : {
+      "select" : { "from": "test.test_db" },
+      "result" : [{ "fk": "0", "datetime": "946684800000" }]
+    }
+  },
+  {
+    "name" : "datetime_day_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{ "fk": 0, "datetime": "2000-01-01" }]
+    },
+    "check" : {
+      "select" : { "from": "test.test_db" },
+      "result" : [{ "fk": "0", "datetime": "946684800000" }]
+    }
+  },
+  {
+    "name" : "datetime_month_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{ "fk": 0, "datetime": "2000-01-01" }]
+    },
+    "check" : {
+      "select" : { "from": "test.test_db" },
+      "result" : [{ "fk": "0", "datetime": "946684800000" }]
+    }
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "name"  : "expr_between",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "between", "e": 1, "min": 0, "max": 2}, "alias": "x"}},
+      "result" : [{ "x": "1" }]
+    }
+  },
+  {
+    "name"  : "expr_between_short",
+    "check" : {
+      "select" : {"columns" : {"e": {"$between": [1, 0, 2]}, "alias": "x"}},
+      "result" : [{ "x": "1" }]
+    }
+  },
+  {
+    "name"  : "expr_between_short_invalid_bool",
+    "check" : {
+      "select" : {"columns" : {"e": {"$between": false}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_between_short_invalid_int",
+    "check" : {
+      "select" : {"columns" : {"e": {"$between": 1}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_between_short_invalid_float",
+    "check" : {
+      "select" : {"columns" : {"e": {"$between": 1.5}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_between_short_invalid_string",
+    "check" : {
+      "select" : {"columns" : {"e": {"$between": "a"}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_between_short_invalid_obj",
+    "check" : {
+      "select" : {"columns" : {"e": {"$between": {}}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_between_short_invalid_too_few",
+    "check" : {
+      "select" : {"columns" : {"e": {"$between": [1, 0]}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_between_short_invalid_too_many",
+    "check" : {
+      "select" : {"columns" : {"e": {"$between": [1, 0, 2, 3]}, "alias": "x"}},
+      "status" : "er"
+    }
+  }
+]

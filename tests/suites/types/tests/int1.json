@@ -1,0 +1,74 @@
+[
+  {
+    "name" : "int1_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int1": "10"}]
+    },
+    "check" : {
+      "select" : {"from": "test.test_db"},
+      "result" : [{"fk": "0", "int1": "10"}]
+    }
+  },
+  {
+    "name" : "int1_max",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int1": 127}]
+    },
+    "check" : {
+      "select" : {"from": "test.test_db"},
+      "result" : [{"fk": "0", "int1": "127"}]
+    }
+  },
+  {
+    "name" : "int1_min",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int1": -128}]
+    },
+    "check" : {
+      "select" : {"from": "test.test_db"},
+      "result" : [{"fk": "0", "int1": "-128"}]
+    }
+  },
+  {
+    "name" : "int1_over",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int1": 128}]
+    },
+    "status" : "er"
+  },
+  {
+    "name" : "int1_under",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int1": -129}]
+    },
+    "status" : "er"
+  },
+  {
+    "name" : "int1_float",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int1": 1.0}]
+    },
+    "status" : "er"
+  },
+  {
+    "name" : "int1_float_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int1": "1.0"}]
+    },
+    "status" : "er"
+  }
+]

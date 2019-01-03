@@ -1,0 +1,39 @@
+{
+  "name"        : "types",
+  "desc"        : "tests for expressions",
+  "suite_start" : [
+    {
+      "action"   : "create",
+      "create"   : "database",
+      "parent"   : "test",
+      "database" : {
+        "name"   : "db",
+        "label"  : "Test Database",
+        "fields" : [
+          {
+            "name" : "k",
+            "type" : "int(4)",
+            "key"  : true
+          },
+          {
+            "name" : "v",
+            "type" : "int(4)"
+          }
+        ]
+      }
+    },
+    {
+      "action"   : "insert",
+      "database" : "test.db",
+      "records"  : [
+        {"k": 0, "v": 0},
+        {"k": 1, "v": 1}
+      ]
+    }
+  ],
+  "suite_end": {
+    "action"   : "drop",
+    "drop"     : "database",
+    "database" : "test.db"
+  }
+}

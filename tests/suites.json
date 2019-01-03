@@ -1,23 +1,21 @@
 {
-	"name": "primary",
-	"desc": "primary test suites",
-	"disabled": [],
-	"suites": [
-		"single_key_basic",
-		"single_key_advanced",
-		"types"
-	],
-	"start": {
-		"action": "create",
-		"create": "team",
-		"team": {
-			"name": "test",
-			"desc": "test team"
-		}
-	},
-	"end": {
-		"action": "drop",
-		"drop": "team",
-		"team": "test"
-	}
+  "name"     : "primary",
+  "desc"     : "primary test suites",
+  "disabled" : [],
+  "suites"   : [
+    "expr"
+  ],
+  "start" : {
+    "action" : "create",
+    "create" : "group",
+    "group"  : {
+      "name" : "test",
+      "desc" : "test group"
+    }
+  },
+  "end" : {
+    "action" : "drop",
+    "drop"   : "group",
+    "group"  : "test"
+  }
 }

@@ -1,81 +1,81 @@
 {
-    "name": "single_key_basic",
-    "desc": "single key basic database tests",
-    "tests": [
-        "insert",
-        "insert_no_key",
-        "insert_no_value",
-        "insert_one_dupe",
-        "insert_one_one",
-        "insert_two",
-        "insert_with_tags",
-        "insert_with_items",
-        "insert_with_files",
-        "insert_with_all",
-        "insert_update_with_all",
-        "replace_with_all",
-        "set_with_all"
-    ],
-    "suite_start": {
-        "action": "create",
-        "create": "database",
-		"team": "test",
-        "database": {
-            "name": "test_db",
-            "label": "Test Database",
-            "desc": "test database",
-            "fields": [
-                {
-                    "name": "fk",
-                    "type": "int(4)",
-                    "key": true
-                },
-                {
-                    "name": "fv",
-                    "type": "int(4)"
-                }
-            ],
-            "groups": [
-                {
-                    "name": "g1",
-                    "desc": "group with key",
-                    "fields": [
-                        {
-                            "name": "g1fk",
-                            "type": "int(4)",
-                            "key": true
-                        },
-                        {
-                            "name": "g1fv",
-                            "type": "int(4)"
-                        }
-                    ]
-                },
-                {
-                    "name": "g2",
-                    "desc": "group without key",
-                    "fields": [
-                        {
-                            "name": "g2f1",
-                            "type": "int(4)"
-                        },
-                        {
-                            "name": "g2f2",
-                            "type": "int(4)"
-                        }
-                    ]
-                }
-            ]
+  "name"  : "single_key_basic",
+  "desc"  : "single key basic database tests",
+  "tests" : [
+    "insert",
+    "insert_no_key",
+    "insert_no_value",
+    "insert_one_dupe",
+    "insert_one_one",
+    "insert_two",
+    "insert_with_tags",
+    "insert_with_items",
+    "insert_with_files",
+    "insert_with_all",
+    "insert_update_with_all",
+    "replace_with_all",
+    "set_with_all"
+  ],
+  "suite_start" : {
+    "action"   : "create",
+    "create"   : "database",
+    "parent"   : "test",
+    "database" : {
+      "name"   : "test_db",
+      "label"  : "Test Database",
+      "desc"   : "test database",
+      "fields" : [
+        {
+          "name" : "fk",
+          "type" : "int(4)",
+          "key"  : true
+        },
+        {
+          "name" : "fv",
+          "type" : "int(4)"
         }
-    },
-    "suite_end": {
-        "action": "drop",
-        "drop": "database",
-        "database": "test_db"
-    },
-    "test_end": {
-        "action": "reset",
-        "reset": "database",
-        "database": "test_db"
+      ],
+      "databases" : [
+        {
+          "name"   : "g1",
+          "desc"   : "group with key",
+          "fields" : [
+            {
+              "name": "g1fk",
+              "type": "int(4)",
+              "key": true
+            },
+            {
+              "name": "g1fv",
+              "type": "int(4)"
+            }
+          ]
+        },
+        {
+          "name": "g2",
+          "desc": "group without key",
+          "fields": [
+            {
+              "name": "g2f1",
+              "type": "int(4)"
+            },
+            {
+              "name": "g2f2",
+              "type": "int(4)"
+            }
+          ]
+        }
+      ]
     }
+  },
+  "test_end" : {
+    "action"   : "reset",
+    "reset"    : "database",
+    "database" : "test_db"
+  },
+  "suite_end" : {
+    "action"   : "drop",
+    "drop"     : "database",
+    "database" : "test_db"
+  }
 }

@@ -1,0 +1,74 @@
+[
+  {
+    "name" : "int8_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int8": "10"}]
+    },
+    "check" : {
+      "select" : {"from": "test.test_db"},
+      "result" : [{"fk": "0", "int8": "10"}]
+    }
+  },
+  {
+    "name" : "int8_max",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int8": 9223372036854775807}]
+    },
+    "check" : {
+      "select" : {"from": "test.test_db"},
+      "result" : [{"fk": "0", "int8": "9223372036854775807"}]
+    }
+  },
+  {
+    "name" : "int8_min",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int8": -9223372036854775808}]
+    },
+    "check" : {
+      "select" : {"from": "test.test_db"},
+      "result" : [{"fk": "0", "int8": "-9223372036854775808"}]
+    }
+  },
+  {
+    "name" : "int8_over",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int8": "9223372036854775808"}]
+    },
+    "status" : "er"
+  },
+  {
+    "name" : "int8_under",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int8": "-9223372036854775809"}]
+    },
+    "status" : "er"
+  },
+  {
+    "name" : "int8_float",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int8": 1.0}]
+    },
+    "status" : "er"
+  },
+  {
+    "name" : "int8_float_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.test_db",
+      "records"  : [{"fk": 0, "int8": "1.0"}]
+    },
+    "status" : "er"
+  }
+]

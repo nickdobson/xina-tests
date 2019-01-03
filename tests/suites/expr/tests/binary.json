@@ -1,0 +1,219 @@
+[
+  {
+    "name"  : "expr_binary_and_2",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "e1": 0, "e2": 1}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_and_args_0",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "args": []}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_binary_and_args_single_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "args": 0}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_and_args_single_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "args": 1}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_and_args_1_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "args": [0]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_and_args_1_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "args": [1]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_and_args_2_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "args": [0, 1]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_and_args_2_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "args": [1, 1]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_and_args_3_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "args": [0, 1, 1]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_and_args_3_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "and", "args": [1, 1, 1]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_and_short",
+    "check" : {
+      "select" : {"columns" : {"e": {"$and": [0, 1]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_2",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "e1": 0, "e2": 1}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_args_0",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "args": []}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_binary_or_args_single_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "args": 0}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_args_single_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "args": 1}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_args_1_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "args": [0]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_args_1_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "args": [1]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_args_2_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "args": [0, 0]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_args_2_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "args": [0, 1]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_args_3_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "args": [0, 0, 0]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_args_3_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "or", "args": [1, 0, 1]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_or_short",
+    "check" : {
+      "select" : {"columns" : {"e": {"$or": [0, 1]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_equal_2",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "=", "e1": 0, "e2": 1}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_equal_args_single",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "=", "args": 0}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_binary_equal_args_0",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "=", "args": []}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_binary_equal_args_1",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "=", "args": [1]}, "alias": "x"}},
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_binary_equal_args_2",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "=", "args": [0, 1]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_equal_args_3",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "=", "args": [1, 1, 1]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_equal_short",
+    "check" : {
+      "select" : {"columns" : {"e": {"$=": [1, 1]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_not_equal",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "!=", "e1": 0, "e2": 1}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_null_equal",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "<=>", "e1": null, "e2": null}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  }
+]

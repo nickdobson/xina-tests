@@ -1,0 +1,108 @@
+[
+  {
+    "name"  : "expr_alias",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"type": "alias", "alias": "k"}},
+        "from"    : "test.db"
+      },
+      "result" : [
+        { "k": "0" },
+        { "k": "1" }
+      ]
+    }
+  },
+  {
+    "name"  : "expr_alias_invalid_null",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"type": "alias", "alias": null}},
+        "from"    : "test.db"
+      },
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_alias_invalid_bool",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"type": "alias", "alias": false}},
+        "from"    : "test.db"
+      },
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_alias_invalid_int",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"type": "alias", "alias": 1}},
+        "from"    : "test.db"
+      },
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_alias_invalid_float",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"type": "alias", "alias": 1.0}},
+        "from"    : "test.db"
+      },
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_alias_invalid_string",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"type": "alias", "alias": "m"}},
+        "from"    : "test.db"
+      },
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_alias_invalid_obj",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"type": "alias", "alias": {}}},
+        "from"    : "test.db"
+      },
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_alias_invalid_arr",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"type": "alias", "alias": []}},
+        "from"    : "test.db"
+      },
+      "status" : "er"
+    }
+  },
+  {
+    "name"  : "expr_alias_short",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"$alias": "k"}},
+        "from"    : "test.db"
+      },
+      "result" : [
+        { "k": "0" },
+        { "k": "1" }
+      ]
+    }
+  },
+  {
+    "name"  : "expr_alias_short_invalid",
+    "check" : {
+      "select" : {
+        "columns" : {"e": {"$alias": "m"}},
+        "from"    : "test.db"
+      },
+      "status" : "er"
+    }
+  }
+]
