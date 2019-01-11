@@ -3,6 +3,12 @@
   "desc"        : "tests for expressions",
   "suite_start" : [
     {
+      "action"    : "drop",
+      "drop"      : "database",
+      "database"  : "test.db",
+      "if_exists" : true
+    },
+    {
       "action"   : "create",
       "create"   : "database",
       "parent"   : "test",

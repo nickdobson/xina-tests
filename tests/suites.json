@@ -3,16 +3,25 @@
   "desc"     : "primary test suites",
   "disabled" : [],
   "suites"   : [
-    "expr"
+    "expr",
+    "types"
   ],
-  "start" : {
-    "action" : "create",
-    "create" : "group",
-    "group"  : {
-      "name" : "test",
-      "desc" : "test group"
+  "start" : [
+    {
+      "action"    : "drop",
+      "drop"      : "group",
+      "group"     : "test",
+      "if_exists" : true
+    },
+    {
+      "action" : "create",
+      "create" : "group",
+      "group"  : {
+        "name" : "test",
+        "desc" : "test group"
+      }
     }
-  },
+  ],
   "end" : {
     "action" : "drop",
     "drop"   : "group",
