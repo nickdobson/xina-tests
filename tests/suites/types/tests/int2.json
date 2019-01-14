@@ -3,11 +3,11 @@
     "name" : "int2_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int2": "10"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "int2": "10"}]
     }
   },
@@ -15,11 +15,11 @@
     "name" : "int2_max",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int2": 32767}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "int2": "32767"}]
     }
   },
@@ -27,11 +27,11 @@
     "name" : "int2_min",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int2": -32768}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "int2": "-32768"}]
     }
   },
@@ -39,7 +39,7 @@
     "name" : "int2_over",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int2": 32768}]
     },
     "status" : "er"
@@ -48,7 +48,7 @@
     "name" : "int2_under",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int2": -32769}]
     },
     "status" : "er"
@@ -57,7 +57,7 @@
     "name" : "int2_float",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int2": 1.0}]
     },
     "status" : "er"
@@ -66,7 +66,7 @@
     "name" : "int2_float_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int2": "1.0"}]
     },
     "status" : "er"

@@ -3,11 +3,11 @@
     "name" : "bool_0",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": 0 }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "false" }]
     }
   },
@@ -15,11 +15,11 @@
     "name" : "bool_0_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "0" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "false" }]
     }
   },
@@ -27,11 +27,11 @@
     "name" : "bool_false",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": false }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "false" }]
     }
   },
@@ -39,11 +39,11 @@
     "name" : "bool_f_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "f" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "false" }]
     }
   },
@@ -51,11 +51,11 @@
     "name" : "bool_F_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "F" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "false" }]
     }
   },
@@ -63,11 +63,11 @@
     "name" : "bool_false_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "false" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "false" }]
     }
   },
@@ -75,11 +75,11 @@
     "name" : "bool_FALSE_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "FALSE" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "false" }]
     }
   },
@@ -87,11 +87,11 @@
     "name" : "bool_FaLsE_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "FaLsE" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "false" }]
     }
   },
@@ -99,11 +99,11 @@
     "name" : "bool_1",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": 1 }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "true" }]
     }
   },
@@ -111,11 +111,11 @@
     "name" : "bool_1_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "1" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "true" }]
     }
   },
@@ -123,11 +123,11 @@
     "name" : "bool_true",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": true }]
     },
     "check": {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "true" }]
     }
   },
@@ -135,11 +135,11 @@
     "name" : "bool_t_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "t" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "true" }]
     }
   },
@@ -147,11 +147,11 @@
     "name" : "bool_T_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "T" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "true" }]
     }
   },
@@ -159,11 +159,11 @@
     "name" : "bool_true_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "true" }]
     },
     "check": {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "true" }]
     }
   },
@@ -171,11 +171,11 @@
     "name" : "bool_TRUE_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "TRUE" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "true" }]
     }
   },
@@ -183,11 +183,11 @@
     "name" : "bool_TrUe_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "TrUe" }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": "true" }]
     }
   },
@@ -195,11 +195,11 @@
     "name" : "bool_null",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": null }]
     },
     "check" : {
-      "select" : { "from": "test.test_db" },
+      "select" : { "from": "test.db" },
       "result" : [{ "fk": "0", "bool": null }]
     }
   },
@@ -207,7 +207,7 @@
     "name" : "bool_invalid_int",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": 2 }]
     },
     "status" : "er"
@@ -216,7 +216,7 @@
     "name" : "bool_invalid_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{ "fk": 0, "bool": "invalid" }]
     },
     "status" : "er"

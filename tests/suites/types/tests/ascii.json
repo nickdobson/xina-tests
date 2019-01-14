@@ -3,11 +3,11 @@
     "name" : "asciistring(n)_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring4": "abcd"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring4": "abcd"}]
     }
   },
@@ -15,11 +15,11 @@
     "name" : "asciistring(n)_trim",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring4": " abcd "}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring4": "abcd"}]
     }
   },
@@ -27,11 +27,11 @@
     "name" : "asciistring(n)_spaces",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring4": "a \t\r\n b"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring4": "a b"}]
     }
   },
@@ -39,7 +39,7 @@
     "name" : "asciistring(n)_over",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring4": "abcde"}]
     },
     "status" : "er"
@@ -48,11 +48,11 @@
     "name" : "asciistring(n)_int",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring4": 1}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring4": "1"}]
     }
   },
@@ -60,11 +60,11 @@
     "name" : "asciistring(n)_boolean",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring4": true}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring4": "true"}]
     }
   },
@@ -72,11 +72,11 @@
     "name" : "asciistring_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring": "abcd"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring": "abcd"}]
     }
   },
@@ -84,11 +84,11 @@
     "name" : "asciistring_trim",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring": " abcd "}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring": "abcd"}]
     }
   },
@@ -96,11 +96,11 @@
     "name" : "asciistring_spaces",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring": "a \t\r\n b"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring": "a b"}]
     }
   },
@@ -108,11 +108,11 @@
     "name" : "asciistring_int",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring": 1}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring": "1"}]
     }
   },
@@ -120,11 +120,11 @@
     "name" : "asciistring_boolean_false",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring": false}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring": "false"}]
     }
   },
@@ -132,11 +132,11 @@
     "name" : "asciistring_boolean_true",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciistring": true}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciistring": "true"}]
     }
   },
@@ -144,11 +144,11 @@
     "name" : "asciitext_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciitext": "abcd"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciitext": "abcd"}]
     }
   },
@@ -156,11 +156,11 @@
     "name" : "asciitext_trim",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciitext": " abcd "}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciitext": " abcd "}]
     }
   },
@@ -168,11 +168,11 @@
     "name" : "asciitext_spaces",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciitext": "a \t\r\n b"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciitext": "a \t\r\n b"}]
     }
   },
@@ -180,11 +180,11 @@
     "name" : "asciitext_int",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciitext": 1}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciitext": "1"}]
     }
   },
@@ -192,11 +192,11 @@
     "name" : "asciitext_boolean_false",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciitext": false}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciitext": "false"}]
     }
   },
@@ -204,11 +204,11 @@
     "name" : "asciitext_boolean_true",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "asciitext": true}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "asciitext": "true"}]
     }
   }

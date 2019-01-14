@@ -3,11 +3,11 @@
     "name" : "float4_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "float4": "1.5"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "float4": "1.5"}]
     }
   },
@@ -15,11 +15,11 @@
     "name" : "float4_float",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "float4": 1.5}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "float4": "1.5"}]
     }
   },
@@ -27,11 +27,11 @@
     "name" : "float4_int",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "float4": 1}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "float4": "1.0"}]
     }
   },
@@ -39,7 +39,7 @@
     "name" : "float4_invalid_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "float4": "a"}]
     },
     "status" : "er"
@@ -48,11 +48,11 @@
     "name" : "float8_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "float8": "1.5"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "float8": "1.5"}]
     }
   },
@@ -60,11 +60,11 @@
     "name" : "float8_float",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "float8": 1.5}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "float8": "1.5"}]
     }
   },
@@ -72,11 +72,11 @@
     "name" : "float8_int",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "float8": 1}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "float8": "1.0"}]
     }
   },
@@ -84,7 +84,7 @@
     "name" : "float8_invalid_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "float8": "a"}]
     },
     "status" : "er"

@@ -9,6 +9,12 @@
   "start" : [
     {
       "action"    : "drop",
+      "drop"      : "database",
+      "database"  : "test.db",
+      "if_exists" : true
+    },
+    {
+      "action"    : "drop",
       "drop"      : "group",
       "group"     : "test",
       "if_exists" : true

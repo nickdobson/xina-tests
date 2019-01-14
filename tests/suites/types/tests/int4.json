@@ -3,11 +3,11 @@
     "name" : "int4_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int4": "10"}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "int4": "10"}]
     }
   },
@@ -15,11 +15,11 @@
     "name" : "int4_max",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int4": 2147483647}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "int4": "2147483647"}]
     }
   },
@@ -27,11 +27,11 @@
     "name" : "int4_min",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int4": -2147483648}]
     },
     "check" : {
-      "select" : {"from": "test.test_db"},
+      "select" : {"from": "test.db"},
       "result" : [{"fk": "0", "int4": "-2147483648"}]
     }
   },
@@ -39,7 +39,7 @@
     "name" : "int4_over",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int4": 2147483648}]
     },
     "status" : "er"
@@ -48,7 +48,7 @@
     "name" : "int4_under",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int4": -2147483649}]
     },
     "status" : "er"
@@ -57,7 +57,7 @@
     "name" : "int4_float",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int4": 1.0}]
     },
     "status" : "er"
@@ -66,7 +66,7 @@
     "name" : "int4_float_string",
     "do"   : {
       "action"   : "insert",
-      "database" : "test.test_db",
+      "database" : "test.db",
       "records"  : [{"fk": 0, "int4": "1.0"}]
     },
     "status" : "er"

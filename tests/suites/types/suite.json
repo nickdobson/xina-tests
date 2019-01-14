@@ -6,7 +6,7 @@
     "create"   : "database",
     "parent"   : "test",
     "database" : {
-      "name"   : "test_db",
+      "name"   : "db",
       "label"  : "Test Database",
       "desc"   : "test database",
       "fields" : [
@@ -111,11 +111,11 @@
   "suite_end": {
     "action"   : "drop",
     "drop"     : "database",
-    "database" : "test.test_db"
+    "database" : "test.db"
   },
   "test_end"  : {
     "action"   : "delete",
-    "database" : "test.test_db",
+    "database" : "test.db",
     "records"  : { "type": "all" }
   }
 }
