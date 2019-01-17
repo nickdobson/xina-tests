@@ -1,5 +1,19 @@
 [
   {
+    "name"  : "expr_unary_not_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "unary", "op": "not", "e": true}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_unary_not_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "unary", "op": "not", "e": false}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
     "name"  : "expr_unary_not_0",
     "check" : {
       "select" : {"columns" : {"e": {"type": "unary", "op": "not", "e": 0}, "alias": "x"}},
@@ -45,15 +59,15 @@
     "name"  : "expr_unary_negate_4",
     "check" : {
       "select" : {"columns" : {"e": {"type": "unary", "op": "-", "e": 4}, "alias": "x"}},
-      "result" : [{"x": "-4"}],
-      "desc" : "Negating -4 results in 4.0 (negatives are possobly treated as floats)"
+      "result" : [{"x": "-4"}]
     }
   },
   {
     "name"  : "expr_unary_negate_-4",
     "check" : {
       "select" : {"columns" : {"e": {"type": "unary", "op": "-", "e": -4}, "alias": "x"}},
-      "result" : [{"x": "4"}]
+      "result" : [{"x": "4"}],
+      "desc" : "Negating -4 results in 4.0 (negatives are possobly treated as floats)"
     }
   },
   {

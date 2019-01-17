@@ -1,0 +1,9 @@
+[
+  {
+    "name"  : "expr_exists_4",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "exists", "select": { "type": "all" }}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "name"  : "expr_count_rows",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "count_rows"}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  }
+]
