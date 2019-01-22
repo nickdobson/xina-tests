@@ -749,10 +749,6 @@
       "result" : [{"x": null}]
     }
   },
-
-
-
-
   {
     "name"  : "expr_binary_mod_2_4",
     "check" : {
@@ -849,6 +845,112 @@
     "check" : {
       "select" : {"columns" : {"e": {"$%": [null,null]}, "alias": "x"}},
       "result" : [{"x": null}]
+    }
+  },
+  {
+    "name"  : "expr_binary_like_a_b",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "like", "e1": "a", "e2": "b"}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_like_a_a",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "like", "e1": "a", "e2": "a"}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_like_wildcard_",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "like", "e1": "Andrew!", "e2": "Andrew_"}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_like_wildcard%",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "like", "e1": "Andrew!", "e2": "%A%d%"}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_like_case",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "like", "e1": "abc", "e2": "ABC"}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_like_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "like", "e1": "abc", "e2": "bcd"}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_like_numeric",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "like", "e1": 10, "e2": "1%"}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_like_expr_null",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "like", "e1": null, "e2": "a"}, "alias": "x"}},
+      "result" : [{"x": null}]
+    }
+  },
+  {
+    "name"  : "expr_binary_like_pat_null",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "like", "e1": "a", "e2": null}, "alias": "x"}},
+      "result" : [{"x": null}]
+    }
+  },
+  {
+    "name"  : "expr_binary_regexp_.*",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "regexp", "e1": "Andrew!", "e2": ".*"}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_regexp_A",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "regexp", "e1": "a", "e2": "A"}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_regexp_letter_range",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "regexp", "e1": "a", "e2": "^[a-d]"}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_regexp_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "binary", "op": "regexp", "e1": "new*\n*line", "e2": "new\\*.\\*line"}, "alias": "x"}},
+      "result" : [{"x": "0"}],
+      "desc" : "This should result in false, but is true. Reference: https://dev.mysql.com/doc/refman/8.0/en/regexp.html#operator_regexp"
+    }
+  },
+  {
+    "name"  : "expr_binary_regexp_short_string_1",
+    "check" : {
+      "select" : {"columns" : {"e": {"$regexp": ["Andrew","And"]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_binary_regexp_short_string_2",
+    "check" : {
+      "select" : {"columns" : {"e": {"$regexp": ["Andrew","and"]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
     }
   }
 ]

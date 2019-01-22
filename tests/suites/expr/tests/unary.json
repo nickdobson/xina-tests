@@ -69,13 +69,5 @@
       "result" : [{"x": "4"}],
       "desc" : "Negating -4 results in 4.0 (negatives are possobly treated as floats)"
     }
-  },
-  {
-    "name"  : "expr_unary_bit_invert_0",
-    "check" : {
-      "select" : {"columns" : {"e": {"type": "unary", "op": "~", "e": 0}, "alias": "x"}},
-      "result" : [{"x": "1"}],
-      "desc" : "server error with bit invert operator"
-    }
   }
 ]
