@@ -1,0 +1,31 @@
+[
+  {
+    "name"  : "expr_in_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "in", "e": "Andrew", "values": ["Nick", "Andrew", "Joe"]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_in_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "in", "e": "Eric", "values": ["Nick", "Andrew", "Joe"]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  },
+  {
+    "name"  : "expr_in_short_array_true",
+    "check" : {
+      "select" : {"columns" : {"e": {"$in": ["Andrew", ["Nick", "Andrew", "Joe"]]}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_in_short_array_false",
+    "check" : {
+      "select" : {"columns" : {"e": {"$in": ["Eric", ["Nick", "Andrew", "Joe"]]}, "alias": "x"}},
+      "result" : [{"x": "0"}]
+    }
+  }
+]
+

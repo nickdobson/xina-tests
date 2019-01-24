@@ -1,0 +1,67 @@
+[
+  {
+    "name"  : "expr_function_AVG_DISTINCT",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "AVG_DISTINCT", "args": [3,5]}, "alias": "x"}},
+      "result" : [{"x": "4"}],
+      "desc": "syntax failure"
+    }
+  },
+  {
+    "name"  : "expr_function_COUNT_DISTINCT",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "COUNT_DISTINCT", "args": [1,2]}, "alias": "x"}},
+      "result" : [{"x": "2"}],
+      "desc": "syntax failure"
+    }
+  },
+  {
+    "name"  : "expr_function_POW",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "POW", "args": [2,3]}, "alias": "x"}},
+      "result" : [{"x": "8"}],
+      "desc": "function operates with decimals"
+    }
+  },
+  {
+    "name"  : "expr_function_POW_short",
+    "check" : {
+      "select" : {"columns" : {"e": { "$$pow": [2, 3] }, "alias": "x"}},
+      "result" : [{"x": "8"}],
+      "desc": "function operates with decimals"
+    }
+  },
+  {
+    "name"  : "expr_function_CEIL",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "CEIL", "args": [2.3]}, "alias": "x"}},
+      "result" : [{"x": "3"}],
+      "desc": "CEIL function doesn't work"
+    }
+  },
+  {
+    "name"  : "expr_function_FLOOR",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "FLOOR", "args": [2.3]}, "alias": "x"}},
+      "result" : [{"x": "2"}],
+      "desc": "FLOOR function doesn't work"
+    }
+  },
+  {
+    "name"  : "expr_function_MIN",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "MIN", "args": [6,9,5,4,3,7,8]}, "alias": "x"}},
+      "result" : [{"x": "3"}]
+    },
+    "desc": "syntax failure"
+  },
+  {
+    "name"  : "expr_function_MAX",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "MAX", "args": [6,9,5,4,3,7,8]}, "alias": "x"}},
+      "result" : [{"x": "9"}],
+      "desc": "syntax failure"
+    }
+  }
+]
+

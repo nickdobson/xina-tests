@@ -1,9 +1,23 @@
 [
   {
-    "name"  : "expr_exists_4",
+    "name"  : "expr_exists_select_all",
     "check" : {
       "select" : {"columns" : {"e": {"type": "exists", "select": { "type": "all" }}, "alias": "x"}},
       "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_exists_select_limit",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "exists", "select" : { "from": "test.db", "limit": 1 }}, "alias": "x"}},
+      "result" : [{"x": "1"}]
+    }
+  },
+  {
+    "name"  : "expr_exists_select_none",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "exists", "select" : { "from": "test.db", "where": {"type": "between", "e": "k", "min": 4, "max": 6} }}, "alias": "x"}},
+      "result" : [{"x": "0"}]
     }
   }
 ]
