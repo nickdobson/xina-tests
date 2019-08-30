@@ -241,8 +241,7 @@
     "name"  : "expr_binary_not_equal_args_3",
     "check" : {
       "select" : {"columns" : {"e": {"type": "binary", "op": "!=", "args": [1, 1, 1]}, "alias": "x"}},
-      "result" : [{"x": "1"}],
-      "desc" : "1!=1!=1 == (1!=1)!=1 => 0!=1 => 1"
+      "result" : [{"x": "0"}]
     }
   },
   {

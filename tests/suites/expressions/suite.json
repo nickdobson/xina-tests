@@ -1,5 +1,5 @@
 {
-  "name"        : "types",
+  "name"        : "expressions",
   "desc"        : "tests for expressions",
   "suite_start" : [
     {
@@ -40,6 +40,7 @@
   "suite_end": {
     "action"   : "drop",
     "drop"     : "database",
-    "database" : "test.db"
+    "database" : "test.db",
+    "if_exists" : true
   }
 }

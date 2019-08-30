@@ -1,0 +1,114 @@
+[
+  {
+    "name" : "index_single_column_short",
+    "do"   : {
+      "action"   : "create",
+      "create"   : "database",
+      "parent"   : "test",
+      "database" : {
+        "name"   : "db",
+        "label"  : "Test Database",
+        "fields" : [
+          {
+            "name" : "k",
+            "type" : "int(4)",
+            "key"  : true
+          },
+          {
+            "name" : "v",
+            "type" : "int(4)"
+          }
+        ],
+        "indexes": [
+          "v"
+        ]
+      }
+    }
+  },
+  {
+    "name" : "index_single_column_full",
+    "do"   : {
+      "action"   : "create",
+      "create"   : "database",
+      "parent"   : "test",
+      "database" : {
+        "name"   : "db",
+        "label"  : "Test Database",
+        "fields" : [
+          {
+            "name" : "k",
+            "type" : "int(4)",
+            "key"  : true
+          },
+          {
+            "name" : "v",
+            "type" : "int(4)"
+          }
+        ],
+        "indexes": [
+          {
+            "parts": ["v"]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name" : "index_single_column_unique",
+    "do"   : {
+      "action"   : "create",
+      "create"   : "database",
+      "parent"   : "test",
+      "database" : {
+        "name"   : "db",
+        "label"  : "Test Database",
+        "fields" : [
+          {
+            "name" : "k",
+            "type" : "int(4)",
+            "key"  : true
+          },
+          {
+            "name" : "v",
+            "type" : "int(4)"
+          }
+        ],
+        "indexes": [
+          {
+            "type"  : "unique",
+            "parts" : ["v"]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name" : "index_single_column_fulltext",
+    "do"   : {
+      "action"   : "create",
+      "create"   : "database",
+      "parent"   : "test",
+      "database" : {
+        "name"   : "db",
+        "label"  : "Test Database",
+        "fields" : [
+          {
+            "name" : "k",
+            "type" : "int(4)",
+            "key"  : true
+          },
+          {
+            "name" : "v",
+            "type" : "asciistring"
+          }
+        ],
+        "indexes": [
+          {
+            "type"  : "fulltext",
+            "parts" : ["v"]
+          }
+        ]
+      }
+    }
+  }
+]

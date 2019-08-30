@@ -1,0 +1,33 @@
+[
+  {
+    "name"  : "expr_function_POW",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "POW", "args": [2,3]}, "alias": "x"}},
+      "result" : [{"x": "8.0"}],
+      "desc": "function operates with decimals"
+    }
+  },
+  {
+    "name"  : "expr_function_POW_short",
+    "check" : {
+      "select" : {"columns" : {"e": { "$$pow": [2, 3] }, "alias": "x"}},
+      "result" : [{"x": "8.0"}],
+      "desc": "function operates with decimals"
+    }
+  },
+  {
+    "name"  : "expr_function_CEILING",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "CEILING", "args": [2.3]}, "alias": "x"}},
+      "result" : [{"x": "3"}]
+    }
+  },
+  {
+    "name"  : "expr_function_FLOOR",
+    "check" : {
+      "select" : {"columns" : {"e": {"type": "function", "function": "FLOOR", "args": [2.3]}, "alias": "x"}},
+      "result" : [{"x": "2"}]
+    }
+  }
+]
+

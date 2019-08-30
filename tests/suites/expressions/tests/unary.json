@@ -59,15 +59,14 @@
     "name"  : "expr_unary_negate_4",
     "check" : {
       "select" : {"columns" : {"e": {"type": "unary", "op": "-", "e": 4}, "alias": "x"}},
-      "result" : [{"x": "-4"}]
+      "result" : [{"x": "-4.0"}]
     }
   },
   {
     "name"  : "expr_unary_negate_-4",
     "check" : {
       "select" : {"columns" : {"e": {"type": "unary", "op": "-", "e": -4}, "alias": "x"}},
-      "result" : [{"x": "4"}],
-      "desc" : "Negating -4 results in 4.0 (negatives are possobly treated as floats)"
+      "result" : [{"x": "4.0"}]
     }
   }
 ]

@@ -1,0 +1,24 @@
+{
+  "name"        : "databases",
+  "desc"        : "tests for databases",
+  "suite_start" : [
+    {
+      "action"    : "drop",
+      "drop"      : "database",
+      "database"  : "test.db",
+      "if_exists" : true
+    }
+  ],
+  "test_end": {
+    "action"    : "drop",
+    "drop"      : "database",
+    "database"  : "test.db",
+    "if_exists" : true
+  },
+  "suite_end": {
+    "action"    : "drop",
+    "drop"      : "database",
+    "database"  : "test.db",
+    "if_exists" : true
+  }
+}
