@@ -1,12 +1,12 @@
 {
   "name"     : "primary",
   "desc"     : "primary test suites",
-  "disabled" : [
+  "disabled" : [],
+  "suites"   : [
+    "databases",
     "expressions",
     "types"
-  ],
-  "suites"   : [
-    "databases"
+  
   ],
   "start" : [
     {

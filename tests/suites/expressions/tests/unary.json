@@ -59,7 +59,7 @@
     "name"  : "expr_unary_negate_4",
     "check" : {
       "select" : {"columns" : {"e": {"type": "unary", "op": "-", "e": 4}, "alias": "x"}},
-      "result" : [{"x": "-4.0"}]
+      "result" : [{"x": "-4"}]
     }
   },
   {
