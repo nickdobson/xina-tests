@@ -58,17 +58,41 @@
     "do"   : {
       "action"   : "insert",
       "database" : "test.db",
-      "records"  : [{"fk": 0, "int4": 1.0}]
+      "records"  : [{"fk": 0, "int4": 1.1}]
     },
     "status" : "er"
+  },
+  {
+    "name" : "int4_itegral_float",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.db",
+      "records"  : [{"fk": 0, "int4": 1.0}]
+    },
+    "check" : {
+      "select" : {"from": "test.db"},
+      "result" : [{"fk": "0", "int4": "1"}]
+    }
   },
   {
     "name" : "int4_float_string",
     "do"   : {
       "action"   : "insert",
       "database" : "test.db",
-      "records"  : [{"fk": 0, "int4": "1.0"}]
+      "records"  : [{"fk": 0, "int4": "1.1"}]
     },
     "status" : "er"
+  },
+  {
+    "name" : "int4_integral_float_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.db",
+      "records"  : [{"fk": 0, "int4": "1.0"}]
+    },
+    "check" : {
+      "select" : {"from": "test.db"},
+      "result" : [{"fk": "0", "int4": "1"}]
+    }
   }
 ]

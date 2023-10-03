@@ -58,17 +58,41 @@
     "do"   : {
       "action"   : "insert",
       "database" : "test.db",
-      "records"  : [{"fk": 0, "int1": 1.0}]
+      "records"  : [{"fk": 0, "int1": 1.1}]
     },
     "status" : "er"
+  },
+  {
+    "name" : "int1_integral_float",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.db",
+      "records"  : [{"fk": 0, "int1": 1.0}]
+    },
+    "check" : {
+      "select" : {"from": "test.db"},
+      "result" : [{"fk": "0", "int1": "1"}]
+    }
   },
   {
     "name" : "int1_float_string",
     "do"   : {
       "action"   : "insert",
       "database" : "test.db",
-      "records"  : [{"fk": 0, "int1": "1.0"}]
+      "records"  : [{"fk": 0, "int1": "1.1"}]
     },
     "status" : "er"
+  },
+  {
+    "name" : "int1_integral_float_string",
+    "do"   : {
+      "action"   : "insert",
+      "database" : "test.db",
+      "records"  : [{"fk": 0, "int1": "1.0"}]
+    },
+    "check" : {
+      "select" : {"from": "test.db"},
+      "result" : [{"fk": "0", "int1": "1"}]
+    }
   }
 ]
