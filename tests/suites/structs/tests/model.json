@@ -1,0 +1,203 @@
+[
+  {
+    "name": "create_model_minimal",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_model_no_parent",
+    "do": {"action": "struct_create", "create": "model", "name": "mod0"},
+    "status": "er"
+  },
+  {
+    "name": "create_model_no_name",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {"action": "struct_create", "create": "model", "parent": "teststructs"}
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_model_non_struct_parent",
+    "do": [
+      {
+        "action": "create",
+        "create": "group",
+        "group": {"name": "teststructs", "desc": "teststructs group"}
+      },
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_model_minimal_with_label",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "label": "Mod0Model",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_model_minimal_with_label_dup_name",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "label": "Mod0Model",
+        "parent": "teststructs"
+      },
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "label": "Mod1Model",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_model_minimal_with_label_dup_label",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "label": "Mod0Model",
+        "parent": "teststructs"
+      },
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod1",
+        "label": "Mod0Model",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_model_with_category_parent",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "category",
+        "name": "cat0",
+        "parent": "teststructs"
+      },
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "parent": "teststructs.cat0"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_model_with_category_sibling",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "category",
+        "name": "cat0",
+        "label": "Cat0Category",
+        "parent": "teststructs"
+      },
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "label": "Mod0Model",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_model_with_category_sibling_dup_name",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "category",
+        "name": "cat0",
+        "label": "Cat0Category",
+        "parent": "teststructs"
+      },
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "cat0",
+        "label": "Mod0Model",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_model_with_category_sibling_dup_label",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "category",
+        "name": "cat0",
+        "label": "Cat0Category",
+        "parent": "teststructs"
+      },
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "label": "Cat0Category",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_model_maximal",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "label": "Mod0Model",
+        "desc": "mod0 model",
+        "event": true,
+        "eventf": true,
+        "eventfs": true,
+        "parent": "teststructs",
+        "group_teams": ["test", "test_alternate"],
+        "database_teams": ["test", "test_alternate"]
+      }
+    ],
+    "status": "ok"
+  }
+]

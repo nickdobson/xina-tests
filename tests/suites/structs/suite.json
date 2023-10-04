@@ -1,0 +1,58 @@
+{
+  "name": "structs",
+  "desc": "tests for structs",
+  "suite_start": [
+    {"action": "drop", "drop": "team", "team": "test", "if_exists": true},
+    {
+      "action": "drop",
+      "drop": "team",
+      "team": "test_alternate",
+      "if_exists": true
+    },
+    {
+      "action": "create",
+      "create": "team",
+      "team": {
+        "name": "test",
+        "label": "TestTeam",
+        "desc": "team for tests",
+        "group_privileges": ["select", "post", "reply"]
+      }
+    },
+    {
+      "action": "create",
+      "create": "team",
+      "team": {
+        "name": "test_alternate",
+        "label": "AlternateTestTeam",
+        "desc": "alternate team for tests",
+        "group_privileges": ["select", "post", "reply"]
+      }
+    }
+  ],
+  "suite_end": [
+    {"action": "drop", "drop": "team", "team": "test", "if_exists": true},
+    {
+      "action": "drop",
+      "drop": "team",
+      "team": "test_alternate",
+      "if_exists": true
+    }
+  ],
+  "test_end": [
+    {
+      "action": "drop",
+      "drop": "group",
+      "group": "teststructs",
+      "drop_children": true,
+      "if_exists": true
+    },
+    {
+      "action": "drop",
+      "drop": "group",
+      "group": "teststructsalternate",
+      "drop_children": true,
+      "if_exists": true
+    }
+  ]
+}

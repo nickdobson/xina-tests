@@ -1,0 +1,128 @@
+[
+  {
+    "name": "create_project_no_label_no_desc",
+    "do": {
+      "action": "struct_create",
+      "create": "project",
+      "name": "teststructs"
+    },
+    "status": "ok"
+  },
+  {
+    "name": "create_project_with_label_with_desc",
+    "do": {
+      "action": "struct_create",
+      "create": "project",
+      "name": "teststructs",
+      "label": "TestStructs",
+      "desc": "Test Structs project"
+    },
+    "status": "ok"
+  },
+  {
+    "name": "create_project_no_name",
+    "do": {
+      "action": "struct_create",
+      "create": "project",
+      "label": "TestStructs",
+      "desc":"Test Structs project"
+    },
+    "status": "er"
+  },
+  {
+    "name": "create_project_with_parent",
+    "do": [
+      {
+        "action": "create",
+        "create": "group",
+        "group": {"name": "teststructs", "desc": "teststructs group"}
+      },
+      {
+        "action": "struct_create",
+        "create": "project",
+        "name": "structproject",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_project_with_project_parent",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "project",
+        "name": "structproject",
+        "parent": "teststructs"
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_project_minimal_with_label",
+    "do": {
+      "action": "struct_create",
+      "create": "project",
+      "name": "teststructs",
+      "label": "TestStructsProject"
+    },
+    "status": "ok"
+  },
+  {
+    "name": "create_project_with_label_dup_name",
+    "do": [
+      {
+        "action": "struct_create",
+        "create": "project",
+        "name": "teststructs",
+        "label": "TestStructsProject"
+      },
+      {
+        "action": "struct_create",
+        "create": "project",
+        "name": "teststructs",
+        "label": "TestStructsProjectAlternate"
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_project_with_label_dup_label",
+    "do": [
+      {
+        "action": "struct_create",
+        "create": "project",
+        "name": "teststructs",
+        "label": "TestStructsProject"
+      },
+      {
+        "action": "struct_create",
+        "create": "project",
+        "name": "teststructsalternate",
+        "label": "TestStructsProject"
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_project_with_teams",
+    "do": {
+      "action": "struct_create",
+      "create": "project",
+      "name": "teststructs",
+      "teams": ["test", "test_alternate"]
+    },
+    "status": "ok"
+  },
+  {
+    "name": "create_project_with_nonexistent_team",
+    "do": {
+      "action": "struct_create",
+      "create": "project",
+      "name": "teststructs",
+      "teams": ["nonexistent"]
+    },
+    "status": "er"
+  }
+]
