@@ -199,5 +199,35 @@
       }
     ],
     "status": "ok"
+  },
+  {
+    "name": "create_model_with_nonexistent_group_team",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "parent": "teststructs",
+        "group_teams": ["test", "nonexistent", "test_alternate"],
+        "database_teams": ["test", "test_alternate"]
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_model_with_nonexistent_database_team",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "name": "mod0",
+        "parent": "teststructs",
+        "group_teams": ["test", "test_alternate"],
+        "database_teams": ["test", "nonexistent", "test_alternate"]
+      }
+    ],
+    "status": "er"
   }
 ]
