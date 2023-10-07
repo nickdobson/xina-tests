@@ -1,0 +1,104 @@
+[
+  {
+    "name": "create_notebook_minimal_no_parent",
+    "do": {
+      "action": "struct_create",
+      "create": "notebook",
+      "name": "teststructs"
+    },
+    "status": "er"
+  },
+  {
+    "name": "create_notebook_minimal_non_structs_parent",
+    "do": [
+      {
+        "action": "create",
+        "create": "group",
+        "group": {"name": "teststructs", "desc": "teststructs group"}
+      },
+      {
+        "action": "struct_create",
+        "create": "notebook",
+        "parent": "teststructs",
+        "name": "not0"
+      }
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_notebook_minimal_project_parent",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "notebook",
+        "parent": "teststructs",
+        "name": "not0"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_notebook_minimal_category_parent",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "category",
+        "parent": "teststructs",
+        "name": "cat0"
+      },
+      {
+        "action": "struct_create",
+        "create": "notebook",
+        "parent": "teststructs.cat0",
+        "name": "not0"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_notebook_minimal_model_parent",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "notebook",
+        "parent": "teststructs.mod0",
+        "name": "not0"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_notebook_minimal_origin_parent",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "origin",
+        "model": "teststructs.mod0",
+        "name": "ori0"
+      },
+      {
+        "action": "struct_create",
+        "create": "notebook",
+        "parent": "teststructs.mod0.ori0",
+        "name": "not0"
+      }
+    ],
+    "status": "er"
+  }
+]

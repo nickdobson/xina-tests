@@ -1,64 +1,143 @@
 [
   {
-    "name": "create_origin_minimal",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0"
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_no_model",
-    "do": {
-      "action": "struct_create",
-      "create": "origin",
-      "name": "teststructs"
-    },
+    "name": "create_event_minimal_no_group",
+    "do": {"action": "struct_create", "create": "event"},
     "status": "er"
   },
   {
-    "name": "create_origin_minimal_model_is_plain_group",
+    "name": "create_event_minimal_non_structs_group",
     "do": [
       {
         "action": "create",
         "create": "group",
         "group": {"name": "teststructs", "desc": "teststructs group"}
       },
+      {"action": "struct_create", "create": "event", "group": "teststructs"}
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_event_minimal_project_group",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {"action": "struct_create", "create": "event", "group": "teststructs"}
+    ],
+    "status": "er"
+  },
+  {
+    "name": "create_event_minimal_category_group",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs",
-        "name": "ori0"
+        "create": "category",
+        "parent": "teststructs",
+        "name": "cat0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.cat0"
       }
     ],
     "status": "er"
   },
   {
-    "name": "create_origin_minimal_model_is_project",
+    "name": "create_event_minimal_model_group",
     "do": [
       {"action": "struct_create", "create": "project", "name": "teststructs"},
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs",
-        "name": "ori0"
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_event_minimal_type_none",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0",
+        "type": "none"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_event_minimal_type_file",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0",
+        "type": "file"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_event_minimal_type_files",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0",
+        "type": "files"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_event_minimal_type_invalid",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0",
+        "type": "invalid"
       }
     ],
     "status": "er"
   },
   {
-    "name": "create_origin_minimal_no_name",
+    "name": "create_event_minimal_name_custom",
     "do": [
       {"action": "struct_create", "create": "project", "name": "teststructs"},
       {
@@ -69,14 +148,42 @@
       },
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0"
+        "create": "event",
+        "group": "teststructs.mod0",
+        "name": "custom"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_event_minimal_name_dup",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0",
+        "name": "custom",
+        "label": "Custom0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0",
+        "name": "custom",
+        "label": "Custom1"
       }
     ],
     "status": "er"
   },
   {
-    "name": "create_origin_minimal_with_label",
+    "name": "create_event_minimal_label_custom",
     "do": [
       {"action": "struct_create", "create": "project", "name": "teststructs"},
       {
@@ -87,16 +194,15 @@
       },
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "label": "Ori0Origin"
+        "create": "event",
+        "group": "teststructs.mod0",
+        "label": "Custom"
       }
     ],
     "status": "ok"
   },
   {
-    "name": "create_origin_minimal_with_label_dup_name",
+    "name": "create_event_minimal_label_dup",
     "do": [
       {"action": "struct_create", "create": "project", "name": "teststructs"},
       {
@@ -107,23 +213,23 @@
       },
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "label": "Ori0Origin"
+        "create": "event",
+        "group": "teststructs.mod0",
+        "name": "custom0",
+        "label": "Custom0"
       },
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "label": "Ori1Origin"
+        "create": "event",
+        "group": "teststructs.mod0",
+        "name": "custom1",
+        "label": "Custom0"
       }
     ],
     "status": "er"
   },
   {
-    "name": "create_origin_minimal_with_label_dup_label",
+    "name": "create_event_minimal_desc_custom",
     "do": [
       {"action": "struct_create", "create": "project", "name": "teststructs"},
       {
@@ -134,23 +240,98 @@
       },
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "label": "Ori0Origin"
+        "create": "event",
+        "group": "teststructs.mod0",
+        "desc": "custom"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_event_minimal_singular_custom",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
       },
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori1",
-        "label": "Ori0Origin"
+        "create": "event",
+        "group": "teststructs.mod0",
+        "singular": "custom"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_event_minimal_plural_custom",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0",
+        "plural": "custom"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_event_minimal_extra_fields",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0",
+        "fields": [
+          {"name": "custom0", "type": "int(8)"},
+          {"name": "custom1", "type": "boolean"}
+        ]
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "name": "create_event_minimal_extra_fields_dup",
+    "do": [
+      {"action": "struct_create", "create": "project", "name": "teststructs"},
+      {
+        "action": "struct_create",
+        "create": "model",
+        "parent": "teststructs",
+        "name": "mod0"
+      },
+      {
+        "action": "struct_create",
+        "create": "event",
+        "group": "teststructs.mod0",
+        "fields": [
+          {"name": "custom0", "type": "int(8)"},
+          {"name": "e_id", "type": "int(8)"},
+          {"name": "custom1", "type": "boolean"}
+        ]
       }
     ],
     "status": "er"
   },
   {
-    "name": "create_origin_minimal_with_desc",
+    "name": "create_event_minimal_teams",
     "do": [
       {"action": "struct_create", "create": "project", "name": "teststructs"},
       {
@@ -161,16 +342,15 @@
       },
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "desc": "ori0 origin"
+        "create": "event",
+        "group": "teststructs.mod0",
+        "teams": ["test", "test_alternate"]
       }
     ],
     "status": "ok"
   },
   {
-    "name": "create_origin_minimal_with_event",
+    "name": "create_event_minimal_nonexistent_team",
     "do": [
       {"action": "struct_create", "create": "project", "name": "teststructs"},
       {
@@ -181,270 +361,9 @@
       },
       {
         "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "event": true
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_with_eventf",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "eventf": true
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_with_eventfs",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "eventfs": true
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_with_group_teams",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "group_teams": ["test", "test_alternate"]
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_with_nonexistent_group_team",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "group_teams": ["test", "nonexistent", "test_alternate"]
-      }
-    ],
-    "status": "er"
-  },
-  {
-    "name": "create_origin_minimal_with_database_teams",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "database_teams": ["test", "test_alternate"]
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_with_nonexistent_database_team",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "database_teams": ["test", "nonexistent", "test_alternate"]
-      }
-    ],
-    "status": "er"
-  },
-  {
-    "name": "create_origin_minimal_with_partition_true",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "partition": true
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_with_partition_object",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "partition": {"from": 2000, "to": 2001}
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_with_partition_object_no_from",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "partition": {"to": 2023}
-      }
-    ],
-    "status": "er"
-  },
-  {
-    "name": "create_origin_minimal_with_partition_object_no_to",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "partition": {"from": 2000}
-      }
-    ],
-    "status": "er"
-  },
-  {
-    "name": "create_origin_minimal_with_partition_object_from_equals_to",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "partition": {"from": 2000, "to": 2000}
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_with_partition_object_from_after_to",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "partition": {"from": 2001, "to": 2000}
-      }
-    ],
-    "status": "ok"
-  },
-  {
-    "name": "create_origin_minimal_with_partition_object_empty",
-    "do": [
-      {"action": "struct_create", "create": "project", "name": "teststructs"},
-      {
-        "action": "struct_create",
-        "create": "model",
-        "parent": "teststructs",
-        "name": "mod0"
-      },
-      {
-        "action": "struct_create",
-        "create": "origin",
-        "model": "teststructs.mod0",
-        "name": "ori0",
-        "partition": {}
+        "create": "event",
+        "group": "teststructs.mod0",
+        "teams": ["test", "nonexistent", "test_alternate"]
       }
     ],
     "status": "er"
