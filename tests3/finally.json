@@ -1,0 +1,13 @@
+[
+  {
+    "name": "globalCleanup",
+    "do": {
+      "@do": "update",
+      "action": "drop",
+      "drop": "group",
+      "group": "test",
+      "if_exists": true,
+      "drop_children": true
+    }
+  }
+]

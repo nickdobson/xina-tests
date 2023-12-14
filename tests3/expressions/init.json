@@ -1,0 +1,27 @@
+[
+  {
+    "name": "init_expressions",
+    "do": [
+      {
+        "@do": "update",
+        "action": "create",
+        "create": "database",
+        "parent": "test",
+        "database": {
+          "name": "expressions",
+          "label": "Expressions Database",
+          "fields": [
+            {"name": "k", "type": "int(4)", "key": true},
+            {"name": "v", "type": "int(4)"}
+          ]
+        }
+      },
+      {
+        "@do": "update",
+        "action": "insert",
+        "database": "test.expressions",
+        "records": [{"k": 0, "v": 0}, {"k": 1, "v": 1}]
+      }
+    ]
+  }
+]

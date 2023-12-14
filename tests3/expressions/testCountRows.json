@@ -1,0 +1,31 @@
+[
+  {
+    "name": "expr_count_rows",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "count_rows"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,4472 @@
+[
+  {
+    "name": "expr_binary_and_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "and",
+              "e1": 0,
+              "e2": 1
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_and_args_0",
+    "do": {
+      "@do": "update",
+      "@status": "er",
+      "action": "select",
+      "select": {
+        "columns": {
+          "e": {
+            "type": "binary",
+            "op": "and",
+            "args": []
+          },
+          "alias": "x"
+        }
+      }
+    }
+  },
+  {
+    "name": "expr_binary_and_args_single_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "and",
+              "args": 0
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_and_args_single_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "and",
+              "args": 1
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_and_args_1_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "and",
+              "args": [
+                0
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_and_args_1_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "and",
+              "args": [
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_and_args_2_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "and",
+              "args": [
+                0,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_and_args_2_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "and",
+              "args": [
+                1,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_and_args_3_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "and",
+              "args": [
+                0,
+                1,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_and_args_3_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "and",
+              "args": [
+                1,
+                1,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_and_short",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$and": [
+                0,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "or",
+              "e1": 0,
+              "e2": 1
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_args_0",
+    "do": {
+      "@do": "update",
+      "@status": "er",
+      "action": "select",
+      "select": {
+        "columns": {
+          "e": {
+            "type": "binary",
+            "op": "or",
+            "args": []
+          },
+          "alias": "x"
+        }
+      }
+    }
+  },
+  {
+    "name": "expr_binary_or_args_single_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "or",
+              "args": 0
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_args_single_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "or",
+              "args": 1
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_args_1_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "or",
+              "args": [
+                0
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_args_1_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "or",
+              "args": [
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_args_2_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "or",
+              "args": [
+                0,
+                0
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_args_2_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "or",
+              "args": [
+                0,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_args_3_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "or",
+              "args": [
+                0,
+                0,
+                0
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_args_3_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "or",
+              "args": [
+                1,
+                0,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_or_short",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$or": [
+                0,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_equal_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "=",
+              "e1": 0,
+              "e2": 1
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_equal_args_single",
+    "do": {
+      "@do": "update",
+      "@status": "er",
+      "action": "select",
+      "select": {
+        "columns": {
+          "e": {
+            "type": "binary",
+            "op": "=",
+            "args": 0
+          },
+          "alias": "x"
+        }
+      }
+    }
+  },
+  {
+    "name": "expr_binary_equal_args_0",
+    "do": {
+      "@do": "update",
+      "@status": "er",
+      "action": "select",
+      "select": {
+        "columns": {
+          "e": {
+            "type": "binary",
+            "op": "=",
+            "args": []
+          },
+          "alias": "x"
+        }
+      }
+    }
+  },
+  {
+    "name": "expr_binary_equal_args_1",
+    "do": {
+      "@do": "update",
+      "@status": "er",
+      "action": "select",
+      "select": {
+        "columns": {
+          "e": {
+            "type": "binary",
+            "op": "=",
+            "args": [
+              1
+            ]
+          },
+          "alias": "x"
+        }
+      }
+    }
+  },
+  {
+    "name": "expr_binary_equal_args_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "=",
+              "args": [
+                0,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_equal_args_3",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "=",
+              "args": [
+                1,
+                1,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_equal_short",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                1,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_not_equal",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "!=",
+              "e1": 0,
+              "e2": 1
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_not_equal_args_single",
+    "do": {
+      "@do": "update",
+      "@status": "er",
+      "action": "select",
+      "select": {
+        "columns": {
+          "e": {
+            "type": "binary",
+            "op": "!=",
+            "args": 0
+          },
+          "alias": "x"
+        }
+      }
+    }
+  },
+  {
+    "name": "expr_binary_not_equal_args_0",
+    "do": {
+      "@do": "update",
+      "@status": "er",
+      "action": "select",
+      "select": {
+        "columns": {
+          "e": {
+            "type": "binary",
+            "op": "!=",
+            "args": []
+          },
+          "alias": "x"
+        }
+      }
+    }
+  },
+  {
+    "name": "expr_binary_not_equal_args_1",
+    "do": {
+      "@do": "update",
+      "@status": "er",
+      "action": "select",
+      "select": {
+        "columns": {
+          "e": {
+            "type": "binary",
+            "op": "!=",
+            "args": [
+              1
+            ]
+          },
+          "alias": "x"
+        }
+      }
+    }
+  },
+  {
+    "name": "expr_binary_not_equal_args_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "!=",
+              "args": [
+                0,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_not_equal_args_3",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "!=",
+              "args": [
+                1,
+                1,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_not_equal_short",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$!=": [
+                1,
+                1
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_null_equal",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "<=>",
+              "e1": null,
+              "e2": null
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": ">",
+              "e1": 4,
+              "e2": 2
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": ">",
+              "e1": 2,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_false_same_number",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": ">",
+              "e1": 4,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_short_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$>": [
+                4,
+                2
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_short_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$>": [
+                4,
+                4
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "<",
+              "e1": 4,
+              "e2": 2
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "<",
+              "e1": 2,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_false_same_number",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "<",
+              "e1": 4,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_short_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$<": [
+                2,
+                4
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_short_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$<": [
+                4,
+                4
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_equal_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": ">=",
+              "e1": 4,
+              "e2": 2
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_equal_true_same_number",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": ">=",
+              "e1": 4,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_equal_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": ">=",
+              "e1": 2,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_equal_short_same_number_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$>=": [
+                4,
+                4
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_equal_short_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$>=": [
+                4,
+                2
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_greater_equal_short_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$>=": [
+                2,
+                4
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_equal_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "<=",
+              "e1": 4,
+              "e2": 2
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_equal_true_same_number",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "<=",
+              "e1": 4,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_equal_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "<=",
+              "e1": 2,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_equal_short_same_number_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$<=": [
+                4,
+                4
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_equal_short_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$<=": [
+                4,
+                2
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_less_equal_short_true",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$<=": [
+                2,
+                4
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_4_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "+",
+              "e1": 2,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_0_0",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "+",
+              "e1": 0,
+              "e2": 0
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_args_1",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "+",
+              "args": [
+                2
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_args_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "type": "binary",
+                  "op": "+",
+                  "args": [
+                    2,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_args_3",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                6,
+                {
+                  "type": "binary",
+                  "op": "+",
+                  "args": [
+                    2,
+                    2,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_short_4",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "$+": [
+                    4
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_short_2_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "$+": [
+                    2,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_short_2_2_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                6,
+                {
+                  "$+": [
+                    2,
+                    2,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_short_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$+": [
+                4,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_add_short_null_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$+": [
+                null,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_4_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "-",
+              "e1": 4,
+              "e2": 2
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_0_0",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "-",
+              "e1": 0,
+              "e2": 0
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_args_1",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "-",
+              "args": [
+                2
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_args_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                3,
+                {
+                  "type": "binary",
+                  "op": "-",
+                  "args": [
+                    6,
+                    3
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_args_2_zero",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                0,
+                {
+                  "type": "binary",
+                  "op": "-",
+                  "args": [
+                    6,
+                    6
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_args_3",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                3,
+                {
+                  "type": "binary",
+                  "op": "-",
+                  "args": [
+                    6,
+                    2,
+                    1
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_args_3_negative",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                -2,
+                {
+                  "type": "binary",
+                  "op": "-",
+                  "args": [
+                    6,
+                    4,
+                    4
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_short_4",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "$-": [
+                    4
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_short_4_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                2,
+                {
+                  "$-": [
+                    4,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_short_8_2_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "$-": [
+                    8,
+                    2,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_short_2_2_4",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                -4,
+                {
+                  "$-": [
+                    2,
+                    2,
+                    4
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_short_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$-": [
+                4,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_sub_short_null_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$-": [
+                null,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_4_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "*",
+              "e1": 2,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_0_0",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "*",
+              "e1": 0,
+              "e2": 0
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_args_1",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "*",
+              "args": [
+                2
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_args_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "type": "binary",
+                  "op": "*",
+                  "args": [
+                    2,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_args_3",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                8,
+                {
+                  "type": "binary",
+                  "op": "*",
+                  "args": [
+                    2,
+                    2,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_short_4",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "$*": [
+                    4
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_short_2_3",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                6,
+                {
+                  "$*": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_short_4_3_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                24,
+                {
+                  "$*": [
+                    4,
+                    3,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_short_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$*": [
+                4,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mult_short_null_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$*": [
+                null,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_4_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "/",
+              "e1": 4,
+              "e2": 2
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "2.0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_2_4",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "/",
+              "e1": 2,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0.5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_60_12",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "/",
+              "e1": 60,
+              "e2": 12
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "5.0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_0_0",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "/",
+              "e1": 0,
+              "e2": 0
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_args_1",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "/",
+              "args": [
+                2
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_args_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                1,
+                {
+                  "type": "binary",
+                  "op": "/",
+                  "args": [
+                    2,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_args_3",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                2,
+                {
+                  "type": "binary",
+                  "op": "/",
+                  "args": [
+                    12,
+                    3,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_args_ones",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                1,
+                {
+                  "type": "binary",
+                  "op": "/",
+                  "args": [
+                    1,
+                    1,
+                    1
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_short_by_zero",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$/": [
+                1,
+                0
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_short_4",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "$/": [
+                    4
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_short_6_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                3,
+                {
+                  "$/": [
+                    6,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_short_24_3_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "$/": [
+                    24,
+                    3,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_short_decimal_24_12_8",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                0.25,
+                {
+                  "$/": [
+                    24,
+                    12,
+                    8
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_short_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$/": [
+                4,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_div_short_null_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$/": [
+                null,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_2_4",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "%",
+              "e1": 2,
+              "e2": 4
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_4_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "%",
+              "e1": 4,
+              "e2": 2
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_n_0",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "%",
+              "e1": 5,
+              "e2": 0
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_0_0",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "%",
+              "e1": 0,
+              "e2": 0
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_args_1",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "%",
+              "args": [
+                2
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_args_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                0,
+                {
+                  "type": "binary",
+                  "op": "%",
+                  "args": [
+                    2,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_args_3",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                0,
+                {
+                  "type": "binary",
+                  "op": "%",
+                  "args": [
+                    6,
+                    4,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_short_4",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$%": [
+                4
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_short_2_3",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                2,
+                {
+                  "$%": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_short_7_5",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                2,
+                {
+                  "$%": [
+                    7,
+                    5
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_short_13_9",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                4,
+                {
+                  "$%": [
+                    13,
+                    9
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_short_4_3_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$=": [
+                1,
+                {
+                  "$%": [
+                    4,
+                    3,
+                    2
+                  ]
+                }
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_short_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$%": [
+                4,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_mod_short_null_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$%": [
+                null,
+                null
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_like_a_b",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "like",
+              "e1": "a",
+              "e2": "b"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_like_a_a",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "like",
+              "e1": "a",
+              "e2": "a"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_like_wildcard_",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "like",
+              "e1": "Andrew!",
+              "e2": "Andrew_"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_like_wildcard%",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "like",
+              "e1": "Andrew!",
+              "e2": "%A%d%"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_like_case",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "like",
+              "e1": "abc",
+              "e2": "ABC"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_like_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "like",
+              "e1": "abc",
+              "e2": "bcd"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_like_numeric",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "like",
+              "e1": 10,
+              "e2": "1%"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_like_expr_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "like",
+              "e1": null,
+              "e2": "a"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_like_pat_null",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "like",
+              "e1": "a",
+              "e2": null
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_regexp_.*",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "regexp",
+              "e1": "Andrew!",
+              "e2": ".*"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_regexp_A",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "regexp",
+              "e1": "a",
+              "e2": "A"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_regexp_letter_range",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "regexp",
+              "e1": "a",
+              "e2": "^[a-d]"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_regexp_false",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "type": "binary",
+              "op": "regexp",
+              "e1": "new*\n*line",
+              "e2": "new\\*.\\*line"
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "0"
+          }
+        ]
+      }
+    ],
+    "#": "This should result in false, but is true. Reference: https://dev.mysql.com/doc/refman/8.0/en/regexp.html#operator_regexp"
+  },
+  {
+    "name": "expr_binary_regexp_short_string_1",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$regexp": [
+                "Andrew",
+                "And"
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_binary_regexp_short_string_2",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "columns": {
+            "e": {
+              "$regexp": [
+                "Andrew",
+                "and"
+              ]
+            },
+            "alias": "x"
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "x": "1"
+          }
+        ]
+      }
+    ]
+  }
+]

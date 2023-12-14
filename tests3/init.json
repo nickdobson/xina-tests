@@ -1,0 +1,21 @@
+[
+  {
+    "name": "globalInit",
+    "do": [
+      {
+        "@do": "update",
+        "action": "drop",
+        "drop": "group",
+        "group": "test",
+        "if_exists": true,
+        "drop_children": true
+      },
+      {
+        "@do": "update",
+        "action": "create",
+        "create": "group",
+        "group": {"name": "test", "desc": "test group"}
+      }
+    ]
+  }
+]

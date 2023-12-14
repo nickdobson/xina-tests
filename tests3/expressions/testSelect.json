@@ -1,0 +1,160 @@
+[
+  {
+    "name": "expr_select_all",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "from": "test.expressions"
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "k": "0",
+            "v": "0"
+          },
+          {
+            "k": "1",
+            "v": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_select_limit",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "from": "test.expressions",
+          "limit": 1
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "k": "0",
+            "v": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_select_offset",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "from": "test.expressions",
+          "offset": 1,
+          "limit": 1
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "k": "1",
+            "v": "1"
+          }
+        ]
+      }
+    ],
+    "#": "should be returning the second of the two records"
+  },
+  {
+    "name": "expr_select_where",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "from": "test.expressions",
+          "where": {
+            "type": "between",
+            "e": {
+              "$col": "test.expressions.k"
+            },
+            "min": 0,
+            "max": 1
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "k": "0",
+            "v": "0"
+          },
+          {
+            "k": "1",
+            "v": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "expr_select_where_short",
+    "do": [
+      {
+        "@do": "merge",
+        "action": "select",
+        "select": {
+          "from": "test.expressions",
+          "where": {
+            "$between": [
+              {
+                "$col": "test.expressions.k"
+              },
+              0,
+              1
+            ]
+          }
+        },
+        "use_strings": true
+      },
+      {
+        "@do": "flattenSelect"
+      },
+      {
+        "@do": "equals",
+        "@value": [
+          {
+            "k": "0",
+            "v": "0"
+          },
+          {
+            "k": "1",
+            "v": "1"
+          }
+        ]
+      }
+    ]
+  }
+]
