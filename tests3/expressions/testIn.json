@@ -3,7 +3,7 @@
     "name": "expr_in_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -38,7 +38,7 @@
     "name": "expr_in_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -73,7 +73,7 @@
     "name": "expr_in_short_array_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -109,7 +109,7 @@
     "name": "expr_in_short_array_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {

@@ -3,7 +3,7 @@
     "name": "expr_binary_and_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -34,7 +34,7 @@
   {
     "name": "expr_binary_and_args_0",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {
@@ -53,7 +53,7 @@
     "name": "expr_binary_and_args_single_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -84,7 +84,7 @@
     "name": "expr_binary_and_args_single_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -115,7 +115,7 @@
     "name": "expr_binary_and_args_1_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -148,7 +148,7 @@
     "name": "expr_binary_and_args_1_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -181,7 +181,7 @@
     "name": "expr_binary_and_args_2_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -215,7 +215,7 @@
     "name": "expr_binary_and_args_2_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -249,7 +249,7 @@
     "name": "expr_binary_and_args_3_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -284,7 +284,7 @@
     "name": "expr_binary_and_args_3_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -319,7 +319,7 @@
     "name": "expr_binary_and_short",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -351,7 +351,7 @@
     "name": "expr_binary_or_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -382,7 +382,7 @@
   {
     "name": "expr_binary_or_args_0",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {
@@ -401,7 +401,7 @@
     "name": "expr_binary_or_args_single_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -432,7 +432,7 @@
     "name": "expr_binary_or_args_single_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -463,7 +463,7 @@
     "name": "expr_binary_or_args_1_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -496,7 +496,7 @@
     "name": "expr_binary_or_args_1_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -529,7 +529,7 @@
     "name": "expr_binary_or_args_2_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -563,7 +563,7 @@
     "name": "expr_binary_or_args_2_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -597,7 +597,7 @@
     "name": "expr_binary_or_args_3_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -632,7 +632,7 @@
     "name": "expr_binary_or_args_3_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -667,7 +667,7 @@
     "name": "expr_binary_or_short",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -699,7 +699,7 @@
     "name": "expr_binary_equal_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -730,7 +730,7 @@
   {
     "name": "expr_binary_equal_args_single",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {
@@ -748,7 +748,7 @@
   {
     "name": "expr_binary_equal_args_0",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {
@@ -766,7 +766,7 @@
   {
     "name": "expr_binary_equal_args_1",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {
@@ -787,7 +787,7 @@
     "name": "expr_binary_equal_args_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -821,7 +821,7 @@
     "name": "expr_binary_equal_args_3",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -856,7 +856,7 @@
     "name": "expr_binary_equal_short",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -888,7 +888,7 @@
     "name": "expr_binary_not_equal",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -919,7 +919,7 @@
   {
     "name": "expr_binary_not_equal_args_single",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {
@@ -937,7 +937,7 @@
   {
     "name": "expr_binary_not_equal_args_0",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {
@@ -955,7 +955,7 @@
   {
     "name": "expr_binary_not_equal_args_1",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {
@@ -976,7 +976,7 @@
     "name": "expr_binary_not_equal_args_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1010,7 +1010,7 @@
     "name": "expr_binary_not_equal_args_3",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1045,7 +1045,7 @@
     "name": "expr_binary_not_equal_short",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1077,7 +1077,7 @@
     "name": "expr_binary_null_equal",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1109,7 +1109,7 @@
     "name": "expr_binary_greater_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1141,7 +1141,7 @@
     "name": "expr_binary_greater_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1173,7 +1173,7 @@
     "name": "expr_binary_greater_false_same_number",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1205,7 +1205,7 @@
     "name": "expr_binary_greater_short_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1237,7 +1237,7 @@
     "name": "expr_binary_greater_short_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1269,7 +1269,7 @@
     "name": "expr_binary_less_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1301,7 +1301,7 @@
     "name": "expr_binary_less_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1333,7 +1333,7 @@
     "name": "expr_binary_less_false_same_number",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1365,7 +1365,7 @@
     "name": "expr_binary_less_short_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1397,7 +1397,7 @@
     "name": "expr_binary_less_short_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1429,7 +1429,7 @@
     "name": "expr_binary_greater_equal_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1461,7 +1461,7 @@
     "name": "expr_binary_greater_equal_true_same_number",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1493,7 +1493,7 @@
     "name": "expr_binary_greater_equal_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1525,7 +1525,7 @@
     "name": "expr_binary_greater_equal_short_same_number_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1557,7 +1557,7 @@
     "name": "expr_binary_greater_equal_short_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1589,7 +1589,7 @@
     "name": "expr_binary_greater_equal_short_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1621,7 +1621,7 @@
     "name": "expr_binary_less_equal_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1653,7 +1653,7 @@
     "name": "expr_binary_less_equal_true_same_number",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1685,7 +1685,7 @@
     "name": "expr_binary_less_equal_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1717,7 +1717,7 @@
     "name": "expr_binary_less_equal_short_same_number_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1749,7 +1749,7 @@
     "name": "expr_binary_less_equal_short_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1781,7 +1781,7 @@
     "name": "expr_binary_less_equal_short_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1813,7 +1813,7 @@
     "name": "expr_binary_add_4_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1845,7 +1845,7 @@
     "name": "expr_binary_add_0_0",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1877,7 +1877,7 @@
     "name": "expr_binary_add_args_1",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1910,7 +1910,7 @@
     "name": "expr_binary_add_args_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1949,7 +1949,7 @@
     "name": "expr_binary_add_args_3",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -1989,7 +1989,7 @@
     "name": "expr_binary_add_short_4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2025,7 +2025,7 @@
     "name": "expr_binary_add_short_2_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2062,7 +2062,7 @@
     "name": "expr_binary_add_short_2_2_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2100,7 +2100,7 @@
     "name": "expr_binary_add_short_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2132,7 +2132,7 @@
     "name": "expr_binary_add_short_null_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2164,7 +2164,7 @@
     "name": "expr_binary_sub_4_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2196,7 +2196,7 @@
     "name": "expr_binary_sub_0_0",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2228,7 +2228,7 @@
     "name": "expr_binary_sub_args_1",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2261,7 +2261,7 @@
     "name": "expr_binary_sub_args_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2300,7 +2300,7 @@
     "name": "expr_binary_sub_args_2_zero",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2339,7 +2339,7 @@
     "name": "expr_binary_sub_args_3",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2379,7 +2379,7 @@
     "name": "expr_binary_sub_args_3_negative",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2419,7 +2419,7 @@
     "name": "expr_binary_sub_short_4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2455,7 +2455,7 @@
     "name": "expr_binary_sub_short_4_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2492,7 +2492,7 @@
     "name": "expr_binary_sub_short_8_2_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2530,7 +2530,7 @@
     "name": "expr_binary_sub_short_2_2_4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2568,7 +2568,7 @@
     "name": "expr_binary_sub_short_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2600,7 +2600,7 @@
     "name": "expr_binary_sub_short_null_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2632,7 +2632,7 @@
     "name": "expr_binary_mult_4_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2664,7 +2664,7 @@
     "name": "expr_binary_mult_0_0",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2696,7 +2696,7 @@
     "name": "expr_binary_mult_args_1",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2729,7 +2729,7 @@
     "name": "expr_binary_mult_args_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2768,7 +2768,7 @@
     "name": "expr_binary_mult_args_3",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2808,7 +2808,7 @@
     "name": "expr_binary_mult_short_4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2844,7 +2844,7 @@
     "name": "expr_binary_mult_short_2_3",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2881,7 +2881,7 @@
     "name": "expr_binary_mult_short_4_3_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2919,7 +2919,7 @@
     "name": "expr_binary_mult_short_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2951,7 +2951,7 @@
     "name": "expr_binary_mult_short_null_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -2983,7 +2983,7 @@
     "name": "expr_binary_div_4_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3015,7 +3015,7 @@
     "name": "expr_binary_div_2_4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3047,7 +3047,7 @@
     "name": "expr_binary_div_60_12",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3079,7 +3079,7 @@
     "name": "expr_binary_div_0_0",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3111,7 +3111,7 @@
     "name": "expr_binary_div_args_1",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3144,7 +3144,7 @@
     "name": "expr_binary_div_args_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3183,7 +3183,7 @@
     "name": "expr_binary_div_args_3",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3223,7 +3223,7 @@
     "name": "expr_binary_div_args_ones",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3263,7 +3263,7 @@
     "name": "expr_binary_div_short_by_zero",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3295,7 +3295,7 @@
     "name": "expr_binary_div_short_4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3331,7 +3331,7 @@
     "name": "expr_binary_div_short_6_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3368,7 +3368,7 @@
     "name": "expr_binary_div_short_24_3_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3406,7 +3406,7 @@
     "name": "expr_binary_div_short_decimal_24_12_8",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3444,7 +3444,7 @@
     "name": "expr_binary_div_short_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3476,7 +3476,7 @@
     "name": "expr_binary_div_short_null_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3508,7 +3508,7 @@
     "name": "expr_binary_mod_2_4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3540,7 +3540,7 @@
     "name": "expr_binary_mod_4_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3572,7 +3572,7 @@
     "name": "expr_binary_mod_n_0",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3604,7 +3604,7 @@
     "name": "expr_binary_mod_0_0",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3636,7 +3636,7 @@
     "name": "expr_binary_mod_args_1",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3669,7 +3669,7 @@
     "name": "expr_binary_mod_args_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3708,7 +3708,7 @@
     "name": "expr_binary_mod_args_3",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3748,7 +3748,7 @@
     "name": "expr_binary_mod_short_4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3779,7 +3779,7 @@
     "name": "expr_binary_mod_short_2_3",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3816,7 +3816,7 @@
     "name": "expr_binary_mod_short_7_5",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3853,7 +3853,7 @@
     "name": "expr_binary_mod_short_13_9",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3890,7 +3890,7 @@
     "name": "expr_binary_mod_short_4_3_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3928,7 +3928,7 @@
     "name": "expr_binary_mod_short_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3960,7 +3960,7 @@
     "name": "expr_binary_mod_short_null_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -3992,7 +3992,7 @@
     "name": "expr_binary_like_a_b",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4024,7 +4024,7 @@
     "name": "expr_binary_like_a_a",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4056,7 +4056,7 @@
     "name": "expr_binary_like_wildcard_",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4088,7 +4088,7 @@
     "name": "expr_binary_like_wildcard%",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4120,7 +4120,7 @@
     "name": "expr_binary_like_case",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4152,7 +4152,7 @@
     "name": "expr_binary_like_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4184,7 +4184,7 @@
     "name": "expr_binary_like_numeric",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4216,7 +4216,7 @@
     "name": "expr_binary_like_expr_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4248,7 +4248,7 @@
     "name": "expr_binary_like_pat_null",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4280,7 +4280,7 @@
     "name": "expr_binary_regexp_.*",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4312,7 +4312,7 @@
     "name": "expr_binary_regexp_A",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4344,7 +4344,7 @@
     "name": "expr_binary_regexp_letter_range",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4376,7 +4376,7 @@
     "name": "expr_binary_regexp_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4409,7 +4409,7 @@
     "name": "expr_binary_regexp_short_string_1",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -4441,7 +4441,7 @@
     "name": "expr_binary_regexp_short_string_2",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {

@@ -3,7 +3,7 @@
     "name": "expr_function_POW",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -38,7 +38,7 @@
     "name": "expr_function_POW_short",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -71,7 +71,7 @@
     "name": "expr_function_CEILING",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -104,7 +104,7 @@
     "name": "expr_function_FLOOR",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {

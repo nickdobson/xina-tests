@@ -3,7 +3,7 @@
     "name": "expr_between",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -21,7 +21,7 @@
     "name": "expr_between_short",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {"columns": {"e": {"$between": [1, 0, 2]}, "alias": "x"}},
         "use_strings": true
@@ -33,7 +33,7 @@
   {
     "name": "expr_between_short_invalid_bool",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {"columns": {"e": {"$between": false}, "alias": "x"}},
@@ -43,7 +43,7 @@
   {
     "name": "expr_between_short_invalid_int",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {"columns": {"e": {"$between": 1}, "alias": "x"}},
@@ -53,7 +53,7 @@
   {
     "name": "expr_between_short_invalid_float",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {"columns": {"e": {"$between": 1.5}, "alias": "x"}},
@@ -63,7 +63,7 @@
   {
     "name": "expr_between_short_invalid_string",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {"columns": {"e": {"$between": "a"}, "alias": "x"}},
@@ -73,7 +73,7 @@
   {
     "name": "expr_between_short_invalid_obj",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {"columns": {"e": {"$between": {}}, "alias": "x"}},
@@ -83,7 +83,7 @@
   {
     "name": "expr_between_short_invalid_too_few",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {"columns": {"e": {"$between": [1, 0]}, "alias": "x"}},
@@ -93,7 +93,7 @@
   {
     "name": "expr_between_short_invalid_too_many",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "@status": "er",
       "action": "select",
       "select": {"columns": {"e": {"$between": [1, 0, 2, 3]}, "alias": "x"}},

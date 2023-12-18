@@ -3,7 +3,7 @@
     "name": "expr_unary_not_true",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -34,7 +34,7 @@
     "name": "expr_unary_not_false",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -65,7 +65,7 @@
     "name": "expr_unary_not_0",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -96,7 +96,7 @@
     "name": "expr_unary_not_1",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -127,7 +127,7 @@
     "name": "expr_unary_not_0_short",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -156,7 +156,7 @@
     "name": "expr_unary_not_1_short",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -185,7 +185,7 @@
     "name": "expr_unary_negate_0",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -216,7 +216,7 @@
     "name": "expr_unary_negate_1",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -247,7 +247,7 @@
     "name": "expr_unary_negate_4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -278,7 +278,7 @@
     "name": "expr_unary_negate_-4",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {

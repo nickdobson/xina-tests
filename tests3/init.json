@@ -3,7 +3,7 @@
     "name": "globalInit",
     "do": [
       {
-        "@do": "update",
+        "@do": "act",
         "action": "drop",
         "drop": "group",
         "group": "test",
@@ -11,7 +11,7 @@
         "drop_children": true
       },
       {
-        "@do": "update",
+        "@do": "act",
         "action": "create",
         "create": "group",
         "group": {"name": "test", "desc": "test group"}

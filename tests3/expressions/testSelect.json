@@ -3,7 +3,7 @@
     "name": "expr_select_all",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "from": "test.expressions"
@@ -14,8 +14,8 @@
         "@do": "flattenSelect"
       },
       {
-        "@do": "equals",
-        "@value": [
+        "@do": "matchSelect",
+        "@rows": [
           {
             "k": "0",
             "v": "0"
@@ -32,7 +32,7 @@
     "name": "expr_select_limit",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "from": "test.expressions",
@@ -44,8 +44,8 @@
         "@do": "flattenSelect"
       },
       {
-        "@do": "equals",
-        "@value": [
+        "@do": "matchSelect",
+        "@rows": [
           {
             "k": "0",
             "v": "0"
@@ -58,7 +58,7 @@
     "name": "expr_select_offset",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "from": "test.expressions",
@@ -71,8 +71,8 @@
         "@do": "flattenSelect"
       },
       {
-        "@do": "equals",
-        "@value": [
+        "@do": "matchSelect",
+        "@rows": [
           {
             "k": "1",
             "v": "1"
@@ -86,7 +86,7 @@
     "name": "expr_select_where",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "from": "test.expressions",
@@ -105,8 +105,8 @@
         "@do": "flattenSelect"
       },
       {
-        "@do": "equals",
-        "@value": [
+        "@do": "matchSelect",
+        "@rows": [
           {
             "k": "0",
             "v": "0"
@@ -123,7 +123,7 @@
     "name": "expr_select_where_short",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "from": "test.expressions",
@@ -143,8 +143,8 @@
         "@do": "flattenSelect"
       },
       {
-        "@do": "equals",
-        "@value": [
+        "@do": "matchSelect",
+        "@rows": [
           {
             "k": "0",
             "v": "0"

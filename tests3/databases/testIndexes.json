@@ -2,7 +2,7 @@
   {
     "name": "index_single_column_short",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "action": "create",
       "create": "database",
       "parent": "test",
@@ -20,7 +20,7 @@
   {
     "name": "index_single_column_full",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "action": "create",
       "create": "database",
       "parent": "test",
@@ -38,7 +38,7 @@
   {
     "name": "index_single_column_unique",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "action": "create",
       "create": "database",
       "parent": "test",
@@ -56,7 +56,7 @@
   {
     "name": "index_single_column_fulltext",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "action": "create",
       "create": "database",
       "parent": "test",

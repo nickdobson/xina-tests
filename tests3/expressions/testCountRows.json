@@ -3,7 +3,7 @@
     "name": "expr_count_rows",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {

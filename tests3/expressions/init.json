@@ -3,7 +3,7 @@
     "name": "init_expressions",
     "do": [
       {
-        "@do": "update",
+        "@do": "act",
         "action": "create",
         "create": "database",
         "parent": "test",
@@ -17,7 +17,7 @@
         }
       },
       {
-        "@do": "update",
+        "@do": "act",
         "action": "insert",
         "database": "test.expressions",
         "records": [{"k": 0, "v": 0}, {"k": 1, "v": 1}]

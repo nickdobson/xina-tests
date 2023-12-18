@@ -3,7 +3,7 @@
     "name": "expr_exists_select_all",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -35,7 +35,7 @@
     "name": "expr_exists_select_limit",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {
@@ -68,7 +68,7 @@
     "name": "expr_exists_select_none",
     "do": [
       {
-        "@do": "merge",
+        "@do": "act",
         "action": "select",
         "select": {
           "columns": {

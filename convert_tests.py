@@ -10,15 +10,23 @@ def main() -> None:
         name = old_test['name']
         new_test = {'name': name}
 
-        assert frozenset(old_test.keys()).issubset(['name', 'check'])
+        assert frozenset(old_test.keys()).issubset(['name', 'check']), (
+            'cannot handle top-level keys other than \'name\' and \'check\''
+        )
 
         if 'check' in old_test:
             check_block = old_test['check']
 
             assert frozenset(check_block.keys()).issubset([
                 'select', 'result', 'status', 'desc'
-            ])
-            assert not ('result' in check_block and 'status' in check_block)
+            ]), (
+                'cannot handle check block keys other than \'select\', '
+                '\'result\', \'status\', and \'desc\''
+            )
+            assert not ('result' in check_block and 'status' in check_block), (
+                'cannot handle check block containing both \'result\' and '
+                '\'status\' simultaneously'
+            )
 
             if 'result' in check_block:
                 new_test['do'] = [
@@ -29,7 +37,7 @@ def main() -> None:
                         'use_strings': True,
                     },
                     {'@do': 'flattenSelect'},
-                    {'@do': 'equals', '@value': check_block['result']},
+                    {'@do': 'mergeSelect', '@rows': check_block['result']},
                 ]
             elif 'status' in check_block:
                 new_test['do'] = {

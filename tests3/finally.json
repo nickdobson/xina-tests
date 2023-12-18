@@ -2,7 +2,7 @@
   {
     "name": "globalCleanup",
     "do": {
-      "@do": "update",
+      "@do": "act",
       "action": "drop",
       "drop": "group",
       "group": "test",
