@@ -1,0 +1,36 @@
+{
+  "beforeAll": [
+    {
+      "name": "globalInit",
+      "do": [
+        {
+          "@do": "act",
+          "action": "drop",
+          "drop": "group",
+          "group": "test",
+          "if_exists": true,
+          "drop_children": true
+        },
+        {
+          "@do": "act",
+          "action": "create",
+          "create": "group",
+          "group": {"name": "test", "desc": "test group"}
+        }
+      ]
+    }
+  ],
+  "afterAll": [
+    {
+      "name": "globalCleanup",
+      "do": {
+        "@do": "act",
+        "action": "drop",
+        "drop": "group",
+        "group": "test",
+        "if_exists": true,
+        "drop_children": true
+      }
+    }
+  ]
+}

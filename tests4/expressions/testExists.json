@@ -1,0 +1,107 @@
+{
+  "tests": [
+    {
+      "name": "expr_exists_select_all",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "type": "exists",
+                "select": {
+                  "type": "all"
+                }
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "expr_exists_select_limit",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "type": "exists",
+                "select": {
+                  "from": "test.expressions",
+                  "limit": 1
+                }
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "expr_exists_select_none",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "type": "exists",
+                "select": {
+                  "from": "test.expressions",
+                  "where": {
+                    "type": "between",
+                    "e": "k",
+                    "min": 4,
+                    "max": 6
+                  }
+                }
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

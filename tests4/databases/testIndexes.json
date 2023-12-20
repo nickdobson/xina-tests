@@ -1,0 +1,76 @@
+{
+  "tests": [
+    {
+      "name": "index_single_column_short",
+      "do": {
+        "@do": "act",
+        "action": "create",
+        "create": "database",
+        "parent": "test",
+        "database": {
+          "name": "db{{id}}",
+          "label": "Test Database {{id}}",
+          "fields": [
+            {"name": "k", "type": "int(4)", "key": true},
+            {"name": "v", "type": "int(4)"}
+          ],
+          "indexes": ["v"]
+        }
+      }
+    },
+    {
+      "name": "index_single_column_full",
+      "do": {
+        "@do": "act",
+        "action": "create",
+        "create": "database",
+        "parent": "test",
+        "database": {
+          "name": "db{{id}}",
+          "label": "Test Database {{id}}",
+          "fields": [
+            {"name": "k", "type": "int(4)", "key": true},
+            {"name": "v", "type": "int(4)"}
+          ],
+          "indexes": [{"parts": ["v"]}]
+        }
+      }
+    },
+    {
+      "name": "index_single_column_unique",
+      "do": {
+        "@do": "act",
+        "action": "create",
+        "create": "database",
+        "parent": "test",
+        "database": {
+          "name": "db{{id}}",
+          "label": "Test Database {{id}}",
+          "fields": [
+            {"name": "k", "type": "int(4)", "key": true},
+            {"name": "v", "type": "int(4)"}
+          ],
+          "indexes": [{"type": "unique", "parts": ["v"]}]
+        }
+      }
+    },
+    {
+      "name": "index_single_column_fulltext",
+      "do": {
+        "@do": "act",
+        "action": "create",
+        "create": "database",
+        "parent": "test",
+        "database": {
+          "name": "db{{id}}",
+          "label": "Test Database {{id}}",
+          "fields": [
+            {"name": "k", "type": "int(4)", "key": true},
+            {"name": "v", "type": "asciistring"}
+          ]
+        },
+        "indexes": [{"type": "fulltext", "parts": ["v"]}]
+      }
+    }
+  ]
+}

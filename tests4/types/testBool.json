@@ -1,0 +1,646 @@
+{
+  "tests": [
+    {
+      "name": "bool_0",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": 0
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_0_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "0"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_false",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": false
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_f_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "f"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_F_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "F"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_false_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "false"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_FALSE_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "FALSE"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_FaLsE_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "FaLsE"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_1",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": 1
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_1_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "1"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_true",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": true
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_t_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "t"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_T_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "T"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_true_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "true"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_TRUE_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "TRUE"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_TrUe_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": "TrUe"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_null",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "bool": null
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "bool": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bool_invalid_int",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "insert",
+        "database": "test.types{{id}}",
+        "records": [
+          {
+            "fk": 0,
+            "bool": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "bool_invalid_string",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "insert",
+        "database": "test.types{{id}}",
+        "records": [
+          {
+            "fk": 0,
+            "bool": "invalid"
+          }
+        ]
+      }
+    }
+  ]
+}

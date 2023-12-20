@@ -1,0 +1,250 @@
+{
+  "tests": [
+    {
+      "name": "float4_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "float4": "1.5"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "float4": "1.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "float4_float",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "float4": 1.5
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "float4": "1.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "float4_int",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "float4": 1
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "float4": "1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "float4_invalid_string",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "insert",
+        "database": "test.types{{id}}",
+        "records": [
+          {
+            "fk": 0,
+            "float4": "a"
+          }
+        ]
+      }
+    },
+    {
+      "name": "float8_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "float8": "1.5"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "float8": "1.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "float8_float",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "float8": 1.5
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "float8": "1.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "float8_int",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "float8": 1
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "float8": "1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "float8_invalid_string",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "insert",
+        "database": "test.types{{id}}",
+        "records": [
+          {
+            "fk": 0,
+            "float8": "a"
+          }
+        ]
+      }
+    }
+  ]
+}

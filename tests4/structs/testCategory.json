@@ -1,0 +1,314 @@
+{
+  "tests": [
+    {
+      "name": "create_category_no_label_no_desc",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        }
+      ]
+    },
+    {
+      "name": "create_category_with_label_with_desc",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "label": "Cat0Category",
+          "desc": "cat0 category",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        }
+      ]
+    },
+    {
+      "name": "create_category_no_parent",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "teststructs{{id}}",
+          "@do": "act",
+          "@status": "er"
+        }
+      ]
+    },
+    {
+      "name": "create_category_non_structs_parent",
+      "do": [
+        {
+          "action": "create",
+          "create": "group",
+          "group": {
+            "name": "teststructs{{id}}",
+            "desc": "teststructs{{id}} group"
+          },
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "parent": "teststructs{{id}}",
+          "@do": "act",
+          "@status": "er"
+        }
+      ]
+    },
+    {
+      "name": "create_subcategory",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat1",
+          "parent": "teststructs{{id}}.cat0",
+          "@do": "act"
+        }
+      ]
+    },
+    {
+      "name": "create_second_category",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat1",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        }
+      ]
+    },
+    {
+      "name": "create_dup_category",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "parent": "teststructs{{id}}",
+          "@do": "act",
+          "@status": "er"
+        }
+      ]
+    },
+    {
+      "name": "create_category_named_def",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "def",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        }
+      ]
+    },
+    {
+      "name": "create_category_named_def_when_def_exists",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "def",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "def",
+          "parent": "teststructs{{id}}",
+          "@do": "act",
+          "@status": "er"
+        }
+      ]
+    },
+    {
+      "name": "create_category_minimal_with_label",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "label": "Cat0Category",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        }
+      ]
+    },
+    {
+      "name": "create_category_with_label_dup_name",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "label": "Cat0Category",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "label": "Cat1Category",
+          "parent": "teststructs{{id}}",
+          "@do": "act",
+          "@status": "er"
+        }
+      ]
+    },
+    {
+      "name": "create_category_with_label_dup_label",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "label": "Cat0Category",
+          "parent": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat1",
+          "label": "Cat0Category",
+          "parent": "teststructs{{id}}",
+          "@do": "act",
+          "@status": "er"
+        }
+      ]
+    },
+    {
+      "name": "create_category_with_teams",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "parent": "teststructs{{id}}",
+          "teams": [
+            "test",
+            "test_alternate"
+          ],
+          "@do": "act"
+        }
+      ]
+    },
+    {
+      "name": "create_category_with_nonexistent_team",
+      "do": [
+        {
+          "action": "struct_create",
+          "create": "project",
+          "name": "teststructs{{id}}",
+          "@do": "act"
+        },
+        {
+          "action": "struct_create",
+          "create": "category",
+          "name": "cat0",
+          "parent": "teststructs{{id}}",
+          "teams": [
+            "nonexistent"
+          ],
+          "@do": "act",
+          "@status": "er"
+        }
+      ]
+    }
+  ]
+}

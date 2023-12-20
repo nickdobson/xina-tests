@@ -1,0 +1,132 @@
+{
+  "tests": [
+    {
+      "name": "expr_alias",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {"e": {"type": "alias", "alias": "k"}},
+            "from": "test.expressions"
+          },
+          "use_strings": true
+        },
+        {"@do": "flattenSelect"},
+        {"@do": "equals", "@value": [{"k": "0"}, {"k": "1"}]}
+      ]
+    },
+    {
+      "name": "expr_alias_invalid_null",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "select",
+        "select": {
+          "columns": {"e": {"type": "alias", "alias": "null"}},
+          "from": "test.expressions"
+        }
+      }
+    },
+    {
+      "name": "expr_alias_invalid_bool",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "select",
+        "select": {
+          "columns": {"e": {"type": "alias", "alias": false}},
+          "from": "test.expressions"
+        }
+      }
+    },
+    {
+      "name": "expr_alias_invalid_int",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "select",
+        "select": {
+          "columns": {"e": {"type": "alias", "alias": 1}},
+          "from": "test.expressions"
+        }
+      }
+    },
+    {
+      "name": "expr_alias_invalid_float",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "select",
+        "select": {
+          "columns": {"e": {"type": "alias", "alias": 1.0}},
+          "from": "test.expressions"
+        }
+      }
+    },
+    {
+      "name": "expr_alias_invalid_string",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "select",
+        "select": {
+          "columns": {"e": {"type": "alias", "alias": "m"}},
+          "from": "test.expressions"
+        }
+      }
+    },
+    {
+      "name": "expr_alias_invalid_obj",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "select",
+        "select": {
+          "columns": {"e": {"type": "alias", "alias": {}}},
+          "from": "test.expressions"
+        }
+      }
+    },
+    {
+      "name": "expr_alias_invalid_arr",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "select",
+        "select": {
+          "columns": {"e": {"type": "alias", "alias": []}},
+          "from": "test.expressions"
+        }
+      }
+    },
+    {
+      "name": "expr_alias_short",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {"e": {"$alias": "k"}},
+            "from": "test.expressions"
+          },
+          "use_strings": true
+        },
+        {"@do": "flattenSelect"},
+        {"@do": "equals", "@value": [{"k": "0"}, {"k": "1"}]}
+      ]
+    },
+    {
+      "name": "expr_alias_short_invalid",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "select",
+        "select": {
+          "columns": {"e": {"$alias": "m"}},
+          "from": "test.expressions"
+        }
+      }
+    }
+  ]
+}

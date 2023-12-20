@@ -1,0 +1,138 @@
+{
+  "tests": [
+    {
+      "name": "expr_function_POW",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "type": "function",
+                "function": "POW",
+                "args": [
+                  2,
+                  3
+                ]
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "8.0"
+            }
+          ]
+        }
+      ],
+      "#": "function operates with decimals"
+    },
+    {
+      "name": "expr_function_POW_short",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "$$pow": [
+                  2,
+                  3
+                ]
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "8.0"
+            }
+          ]
+        }
+      ],
+      "#": "function operates with decimals"
+    },
+    {
+      "name": "expr_function_CEILING",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "type": "function",
+                "function": "CEILING",
+                "args": [
+                  2.3
+                ]
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "expr_function_FLOOR",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "type": "function",
+                "function": "FLOOR",
+                "args": [
+                  2.3
+                ]
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

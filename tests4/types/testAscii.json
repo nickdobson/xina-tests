@@ -1,0 +1,631 @@
+{
+  "tests": [
+    {
+      "name": "asciistring(n)_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring4": "abcd"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring4": "abcd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring(n)_trim",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring4": " abcd "
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring4": "abcd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring(n)_spaces",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring4": "a \t\r\n b"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring4": "a b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring(n)_over",
+      "do": {
+        "@do": "act",
+        "@status": "er",
+        "action": "insert",
+        "database": "test.types{{id}}",
+        "records": [
+          {
+            "fk": 0,
+            "asciistring4": "abcde"
+          }
+        ]
+      }
+    },
+    {
+      "name": "asciistring(n)_int",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring4": 1
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring4": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring(n)_boolean",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring4": true
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring4": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring": "abcd"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring": "abcd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring_trim",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring": " abcd "
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring": "abcd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring_spaces",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring": "a \t\r\n b"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring": "a b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring_int",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring": 1
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring_boolean_false",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring": false
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciistring_boolean_true",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciistring": true
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciistring": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciitext_string",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciitext": "abcd"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciitext": "abcd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciitext_trim",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciitext": " abcd "
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciitext": " abcd "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciitext_spaces",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciitext": "a \t\r\n b"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciitext": "a \t\r\n b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciitext_int",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciitext": 1
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciitext": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciitext_boolean_false",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciitext": false
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciitext": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "asciitext_boolean_true",
+      "do": [
+        {
+          "@do": "act",
+          "action": "insert",
+          "database": "test.types{{id}}",
+          "records": [
+            {
+              "fk": 0,
+              "asciitext": true
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "from": "test.types{{id}}"
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "matchSelect",
+          "@rows": [
+            {
+              "fk": "0",
+              "asciitext": "true"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

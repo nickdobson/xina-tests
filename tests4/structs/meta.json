@@ -1,0 +1,86 @@
+{
+  "beforeAll": [
+    {
+      "name": "initStructs",
+      "do": [
+        {
+          "@do": "act",
+          "action": "drop",
+          "drop": "team",
+          "team": "test",
+          "if_exists": true
+        },
+        {
+          "@do": "act",
+          "action": "drop",
+          "drop": "team",
+          "team": "test_alternate",
+          "if_exists": true
+        },
+        {
+          "@do": "act",
+          "action": "create",
+          "create": "team",
+          "team": {
+            "name": "test",
+            "label": "TestTeam",
+            "desc": "test for tests",
+            "group_privileges": ["select", "post", "reply"]
+          }
+        },
+        {
+          "@do": "act",
+          "action": "create",
+          "create": "team",
+          "team": {
+            "name": "test_alternate",
+            "label": "AlternateTestTeam",
+            "desc": "alternate team for tests",
+            "group_privileges": ["select", "post", "reply"]
+          }
+        }
+      ]
+    }
+  ],
+  "beforeEach": [
+    {
+      "@do": "act",
+      "action": "drop",
+      "drop": "group",
+      "group": "teststructs{{id}}",
+      "if_exists": true,
+      "drop_children": true
+    }
+  ],
+  "afterEach": [
+    {
+      "@do": "act",
+      "action": "drop",
+      "drop": "group",
+      "group": "teststructs{{id}}",
+      "if_exists": true,
+      "drop_children": true
+    }
+  ],
+  "afterAll": [
+    {
+      "name": "cleanupStructs",
+      "do": [
+        {
+          "@do": "act",
+          "action": "drop",
+          "drop": "team",
+          "team": "test",
+          "if_exists": true
+        },
+        {
+          "@do": "act",
+          "action": "drop",
+          "drop": "team",
+          "team": "test_alternate",
+          "if_exists": true
+        }
+      ]
+    }
+  ]
+}

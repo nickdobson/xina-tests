@@ -1,0 +1,146 @@
+{
+  "tests": [
+    {
+      "name": "expr_in_true",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "type": "in",
+                "e": "Andrew",
+                "values": [
+                  "Nick",
+                  "Andrew",
+                  "Joe"
+                ]
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "expr_in_false",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "type": "in",
+                "e": "Eric",
+                "values": [
+                  "Nick",
+                  "Andrew",
+                  "Joe"
+                ]
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "expr_in_short_array_true",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "$in": [
+                  "Andrew",
+                  [
+                    "Nick",
+                    "Andrew",
+                    "Joe"
+                  ]
+                ]
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "expr_in_short_array_false",
+      "do": [
+        {
+          "@do": "act",
+          "action": "select",
+          "select": {
+            "columns": {
+              "e": {
+                "$in": [
+                  "Eric",
+                  [
+                    "Nick",
+                    "Andrew",
+                    "Joe"
+                  ]
+                ]
+              },
+              "alias": "x"
+            }
+          },
+          "use_strings": true
+        },
+        {
+          "@do": "flattenSelect"
+        },
+        {
+          "@do": "equals",
+          "@value": [
+            {
+              "x": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

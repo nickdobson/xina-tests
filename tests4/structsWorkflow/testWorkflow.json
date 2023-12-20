@@ -1,0 +1,105 @@
+{
+  "tests": [
+    {
+      "name": "importArchiveAndMine",
+      "do": [
+        {
+          "@do": "act",
+          "action": "drop",
+          "drop": "group",
+          "group": "test{{id}}",
+          "if_exists": true,
+          "drop_children": true
+        },
+        {
+          "@do": "act",
+          "action": "struct_create",
+          "create": "project",
+          "name": "test{{id}}",
+          "label": "Test {{id}}"
+        },
+        {
+          "@do": "act",
+          "action": "struct_create",
+          "create": "def",
+          "parent": "test{{id}}"
+        },
+        {
+          "@do": "act",
+          "action": "struct_create",
+          "create": "model",
+          "name": "debug",
+          "label": "Debug {{id}}",
+          "parent": "test{{id}}"
+        },
+        {
+          "@do": "act",
+          "action": "struct_create",
+          "create": "origin",
+          "name": "df",
+          "label": "Df {{id}}",
+          "model": "test{{id}}.debug"
+        },
+        {"@do": "uploadObject", "@file": "importArchiveAndMine.csv"},
+        {
+          "@do": "act",
+          "action": "struct_buffer_import",
+          "model": "test{{id}}.debug",
+          "origin": "df",
+          "object_id": "{{object_id}}"
+        },
+        {
+          "@do": "act",
+          "action": "fetch",
+          "fetch": "records",
+          "database": "test{{id}}.debug.df.buffer"
+        },
+        {
+          "@do": "subsumes",
+          "records": [
+            {
+              "dur": 30000000,
+              "file_md5": "f87c206497c2628f8c707a5d33d142c1",
+              "file_size": 138,
+              "file_type": "text/csv",
+              "file_version": 0,
+              "format": "csv",
+              "record_id": 1,
+              "state": 0,
+              "uuid": "22d4e9d0-f74e-444c-b7fa-dfc20976ba4e"
+            }
+          ]
+        },
+        {
+          "@do": "act",
+          "action": "fetch",
+          "fetch": "records",
+          "database": "test{{id}}.debug.df.mn.buffer"
+        },
+        {
+          "@do": "subsumes",
+          "records": [
+            {"mn_id": 0, "record_id": 1, "t": 1701757425000000, "v": 5.0},
+            {"mn_id": 1, "record_id": 2, "t": 1701757425000000, "v": 273.0},
+            {
+              "mn_id": 0,
+              "record_id": 3,
+              "t": 1701757455000000,
+              "v": 0.000000000000001
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "afterEach": [
+    {
+      "@do": "act",
+      "action": "drop",
+      "drop": "group",
+      "group": "test{{id}}",
+      "if_exists": true,
+      "drop_children": true
+    }
+  ]
+}

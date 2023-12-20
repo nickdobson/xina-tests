@@ -1,0 +1,36 @@
+{
+  "beforeEach": [
+    {
+      "@do": "act",
+      "action": "create",
+      "create": "database",
+      "parent": "test",
+      "database": {
+        "name": "types{{id}}",
+        "label": "Test Database {{id}}",
+        "desc": "test database {{id}}",
+        "fields": [
+          {"name": "fk", "type": "int(4)", "key": true},
+          {"name": "bool", "type": "boolean", "nul": true},
+          {"name": "int1", "type": "int(1)", "nul": true},
+          {"name": "int2", "type": "int(2)", "nul": true},
+          {"name": "int4", "type": "int(4)", "nul": true},
+          {"name": "int8", "type": "int(8)", "nul": true},
+          {"name": "float4", "type": "float(4)", "nul": true},
+          {"name": "float8", "type": "float(8)", "nul": true},
+          {"name": "asciistring4", "type": "asciistring(4)", "nul": true},
+          {"name": "asciistring", "type": "asciistring", "nul": true},
+          {"name": "asciitext", "type": "asciitext", "nul": true},
+          {"name": "utf8string4", "type": "utf8string(4)", "nul": true},
+          {"name": "utf8string", "type": "utf8string", "nul": true},
+          {"name": "utf8text", "type": "utf8text", "nul": true},
+          {"name": "datetime", "type": "datetime", "nul": true},
+          {"name": "date", "type": "date", "nul": true},
+          {"name": "localdatetime", "type": "localdatetime", "nul": true},
+          {"name": "localdate", "type": "localdate", "nul": true},
+          {"name": "localtime", "type": "localtime", "nul": true}
+        ]
+      }
+    }
+  ]
+}
