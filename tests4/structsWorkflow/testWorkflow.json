@@ -49,6 +49,7 @@
           "object_id": "{{object_id}}"
         },
         {
+          "#": "Check the origin buffer DB.",
           "@do": "act",
           "action": "fetch",
           "fetch": "records",
@@ -71,6 +72,7 @@
           ]
         },
         {
+          "#": "Check the mnemonic buffer DB.",
           "@do": "act",
           "action": "fetch",
           "fetch": "records",
@@ -88,12 +90,207 @@
               "v": 0.000000000000001
             }
           ]
+        },
+        {
+          "#": "Check the mnemonic definitions DB.",
+          "@do": "act",
+          "action": "fetch",
+          "fetch": "records",
+          "database": "test{{id}}.def.mn"
+        },
+        {
+          "@do": "subsumes",
+          "records": [
+            {
+              "full": "f8",
+              "mn_id": 0,
+              "name": "Foo",
+              "origins": {"test{{id}}.debug": "df"},
+              "record_id": 1,
+              "state": 0,
+              "unit": "mV",
+              "version": 0
+            },
+            {
+              "full": "f8",
+              "mn_id": 1,
+              "name": "Bar",
+              "origins": {"test{{id}}.debug": "df"},
+              "record_id": 2,
+              "state": 0,
+              "unit": "K",
+              "version": 0
+            }
+          ]
+        },
+        {"@do": "runArchive", "@origin": "test{{id}}.debug.df"},
+        {
+          "#": "Check the origin archive DB.",
+          "@do": "act",
+          "action": "fetch",
+          "fetch": "records",
+          "database": "test{{id}}.debug.df.archive"
+        },
+        {
+          "@do": "subsumes",
+          "records": [
+            {
+              "dur": 3600000000,
+              "file_type": "application/octet-stream",
+              "file_version": 0,
+              "format": "xbin",
+              "record_id": 1,
+              "t_end": 1701759600000000,
+              "t_max": 1701757455000000,
+              "t_min": 1701757425000000,
+              "t_start": 1701756000000000,
+              "version": 0
+            }
+          ]
+        },
+        {
+          "#": "Check the origin buffer DB.",
+          "@do": "act",
+          "action": "fetch",
+          "fetch": "records",
+          "database": "test{{id}}.debug.df.buffer"
+        },
+        {
+          "@do": "subsumes",
+          "records": [
+            {
+              "dur": 30000000,
+              "file_type": "application/octet-stream",
+              "file_version": 0,
+              "format": "xbin",
+              "record_id": 2,
+              "state": 2,
+              "t_max": 1701757455000000,
+              "t_min": 1701757425000000,
+              "version": 1
+            }
+          ]
+        },
+        {
+          "#": "Check the mnemonic t60 DB.",
+          "@do": "act",
+          "action": "fetch",
+          "fetch": "records",
+          "database": "test{{id}}.debug.df.mn.bin.t60"
+        },
+        {
+          "@do": "subsumes",
+          "records": [
+            {
+              "avg": 273.0,
+              "max": 273.0,
+              "med": 273.0,
+              "min": 273.0,
+              "mn_id": 1,
+              "n": 1,
+              "record_id": 1,
+              "sd": 0.0,
+              "t": 1701757380000000,
+              "t_max": 1701757425000000,
+              "t_min": 1701757425000000,
+              "vr": 0.0
+            },
+            {
+              "avg": 5.0,
+              "max": 5.0,
+              "med": 5.0,
+              "min": 5.0,
+              "mn_id": 0,
+              "n": 1,
+              "record_id": 2,
+              "sd": 0.0,
+              "t": 1701757380000000,
+              "t_max": 1701757425000000,
+              "t_min": 1701757425000000,
+              "vr": 0.0
+            },
+            {
+              "avg": 0.000000000000001,
+              "max": 0.000000000000001,
+              "med": 0.000000000000001,
+              "min": 0.000000000000001,
+              "mn_id": 0,
+              "n": 1,
+              "record_id": 3,
+              "sd": 0.0,
+              "t": 1701757440000000,
+              "t_max": 1701757455000000,
+              "t_min": 1701757455000000,
+              "vr": 0.0
+            }
+          ]
+        },
+        {
+          "#": "Check the mnemonic t600 DB.",
+          "@do": "act",
+          "action": "fetch",
+          "fetch": "records",
+          "database": "test{{id}}.debug.df.mn.bin.t600"
+        },
+        {
+          "@do": "subsumes",
+          "records": [
+            {
+              "avg": 273.0,
+              "max": 273.0,
+              "med": 273.0,
+              "min": 273.0,
+              "mn_id": 1,
+              "n": 1,
+              "record_id": 1,
+              "sd": 0.0,
+              "t": 1701757200000000,
+              "t_max": 1701757425000000,
+              "t_min": 1701757425000000,
+              "vr": 0.0
+            },
+            {
+              "avg": 2.5000000000000004,
+              "max": 5.0,
+              "med": 5.0,
+              "min": 0.000000000000001,
+              "mn_id": 0,
+              "n": 2,
+              "record_id": 2,
+              "sd": 3.5355339059327373,
+              "t": 1701757200000000,
+              "t_max": 1701757455000000,
+              "t_min": 1701757425000000,
+              "vr": 12.499999999999996
+            }
+          ]
+        },
+        {
+          "#": "Check the mnemonic f8 DB.",
+          "@do": "act",
+          "action": "fetch",
+          "fetch": "records",
+          "database": "test{{id}}.debug.df.mn.f8"
+        },
+        {
+          "@do": "subsumes",
+          "records": [
+            {"mn_id": 1, "record_id": 1, "t": 1701757425000000, "v": 273.0},
+            {"mn_id": 0, "record_id": 2, "t": 1701757425000000, "v": 5.0},
+            {
+              "mn_id": 0,
+              "record_id": 3,
+              "t": 1701757455000000,
+              "v": 0.000000000000001
+            }
+          ]
         }
       ]
     }
   ],
   "afterEach": [
     {
+      "@skip": true,
       "@do": "act",
       "action": "drop",
       "drop": "group",
