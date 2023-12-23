@@ -46,7 +46,7 @@
           "action": "struct_buffer_import",
           "model": "test{{id}}.debug",
           "origin": "df",
-          "object_id": "{{object_id}}"
+          "object_id": "{{$.object_id}}"
         },
         {
           "#": "Check the origin buffer DB.",
@@ -56,7 +56,7 @@
           "database": "test{{id}}.debug.df.buffer"
         },
         {
-          "@do": "subsumes",
+          "@do": "assertSubsumes",
           "records": [
             {
               "dur": 30000000,
@@ -79,7 +79,7 @@
           "database": "test{{id}}.debug.df.mn.buffer"
         },
         {
-          "@do": "subsumes",
+          "@do": "assertSubsumes",
           "records": [
             {"mn_id": 0, "record_id": 1, "t": 1701757425000000, "v": 5.0},
             {"mn_id": 1, "record_id": 2, "t": 1701757425000000, "v": 273.0},
@@ -99,7 +99,7 @@
           "database": "test{{id}}.def.mn"
         },
         {
-          "@do": "subsumes",
+          "@do": "assertSubsumes",
           "records": [
             {
               "full": "f8",
@@ -132,7 +132,7 @@
           "database": "test{{id}}.debug.df.archive"
         },
         {
-          "@do": "subsumes",
+          "@do": "assertSubsumes",
           "records": [
             {
               "dur": 3600000000,
@@ -149,6 +149,12 @@
           ]
         },
         {
+          "@do": "fetchUrl",
+          "@url": "{{$.records.[0].file_url}}",
+          "@assertHost": "smce-xina-test.s3.amazonaws.com",
+          "@assertPath": "{{$.records.[0].file_key}}"
+        },
+        {
           "#": "Check the origin buffer DB.",
           "@do": "act",
           "action": "fetch",
@@ -156,7 +162,7 @@
           "database": "test{{id}}.debug.df.buffer"
         },
         {
-          "@do": "subsumes",
+          "@do": "assertSubsumes",
           "records": [
             {
               "dur": 30000000,
@@ -179,7 +185,7 @@
           "database": "test{{id}}.debug.df.mn.bin.t60"
         },
         {
-          "@do": "subsumes",
+          "@do": "assertSubsumes",
           "records": [
             {
               "avg": 273.0,
@@ -233,7 +239,7 @@
           "database": "test{{id}}.debug.df.mn.bin.t600"
         },
         {
-          "@do": "subsumes",
+          "@do": "assertSubsumes",
           "records": [
             {
               "avg": 273.0,
@@ -273,7 +279,7 @@
           "database": "test{{id}}.debug.df.mn.f8"
         },
         {
-          "@do": "subsumes",
+          "@do": "assertSubsumes",
           "records": [
             {"mn_id": 1, "record_id": 1, "t": 1701757425000000, "v": 273.0},
             {"mn_id": 0, "record_id": 2, "t": 1701757425000000, "v": 5.0},
